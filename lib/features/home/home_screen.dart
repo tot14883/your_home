@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_card_more.dart';
 import 'package:home_demo/components/com_card_view.dart';
 import 'package:home_demo/components/com_font_style.dart';
+import 'package:home_demo/features/detail/main_detail_screen.dart';
 import 'package:home_demo/features/home/sidebar_menu_widget.dart';
 import 'package:home_demo/models/data_home_screen_model.dart';
 
@@ -87,7 +88,17 @@ class HomeScreen extends StatelessWidget {
                                       image: dataHomeScreen.home[index].image,
                                     ),
                                   ),
-                                  const ComCardMore()
+                                  ComCardMore(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const MainDetailScreen(),
+                                        ),
+                                      );
+                                    },
+                                  )
                                 ],
                               ),
                             ),
@@ -123,7 +134,9 @@ class HomeScreen extends StatelessWidget {
                                           dataHomeScreen.townhouse[index].image,
                                     ),
                                   ),
-                                  const ComCardMore()
+                                  ComCardMore(
+                                    onTap: () {},
+                                  )
                                 ],
                               ),
                             ),
@@ -141,25 +154,27 @@ class HomeScreen extends StatelessWidget {
                               width: double.infinity,
                               height: 220,
                               child: ListView(
-                                  shrinkWrap: true,
-                                  scrollDirection: Axis.horizontal,
-                                  children: [
-                                    ...List.generate(
-                                      dataHomeScreen.condo.length,
-                                      (index) => ComCardView(
-                                        name: dataHomeScreen.condo[index].name,
-                                        badroom:
-                                            dataHomeScreen.condo[index].badroom,
-                                        bathroom: dataHomeScreen
-                                            .condo[index].bathroom,
-                                        location: dataHomeScreen
-                                            .condo[index].location,
-                                        image:
-                                            dataHomeScreen.condo[index].image,
-                                      ),
+                                shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
+                                children: [
+                                  ...List.generate(
+                                    dataHomeScreen.condo.length,
+                                    (index) => ComCardView(
+                                      name: dataHomeScreen.condo[index].name,
+                                      badroom:
+                                          dataHomeScreen.condo[index].badroom,
+                                      bathroom:
+                                          dataHomeScreen.condo[index].bathroom,
+                                      location:
+                                          dataHomeScreen.condo[index].location,
+                                      image: dataHomeScreen.condo[index].image,
                                     ),
-                                    const ComCardMore()
-                                  ]),
+                                  ),
+                                  ComCardMore(
+                                    onTap: () {},
+                                  )
+                                ],
+                              ),
                             ),
                             const SizedBox(
                               height: 50,

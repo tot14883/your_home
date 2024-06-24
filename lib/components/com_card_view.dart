@@ -10,6 +10,7 @@ class ComCardView extends StatelessWidget {
     this.bathroom,
     this.location,
     this.image,
+    this.onTap,
   });
 
   final String? name;
@@ -17,6 +18,7 @@ class ComCardView extends StatelessWidget {
   final String? bathroom;
   final String? location;
   final String? image;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -26,7 +28,7 @@ class ComCardView extends StatelessWidget {
         onTap: () {
           debugPrint('Card tapped.');
         },
-        child: Container(
+        child: SizedBox(
           width: 162,
           child: Column(
             children: [

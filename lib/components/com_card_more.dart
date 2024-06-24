@@ -4,7 +4,10 @@ import 'package:home_demo/components/com_color.dart';
 class ComCardMore extends StatelessWidget {
   const ComCardMore({
     super.key,
+    required this.onTap,
   });
+
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class ComCardMore extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
         onTap: () {
-          debugPrint('Card tapped.');
+          onTap();
         },
         child: Container(
           width: 162,
