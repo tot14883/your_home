@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_demo/components/com_app_bar.dart';
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
@@ -10,32 +11,32 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizedBox height13 = const SizedBox(height: 13);
+    SizedBox height31 = const SizedBox(height: 31);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
-          color: comPrimaryColor,
+          color: Colors.white,
           child: Column(
             children: [
               const ComAppbar(
                 iconBackColor: Colors.white,
                 textColor: Colors.white,
               ),
-              height13,
-              Container(
-                height: 150,
-                width: 150,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: comSecondaryColor),
+              height31,
+              SvgPicture.asset(
+                "assets/images/logo/logo_hommy.svg",
+                width: 117,
+                height: 117,
               ),
-              const Expanded(
-                flex: 3,
+              height31,
+              Expanded(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Column(
                     children: [
-                      Spacer(),
-                      ComTextFormField(
+                      height31,
+                      const ComTextFormField(
                         hintText: "username",
                         prefixIcon: Icon(
                           Icons.account_circle_outlined,
@@ -43,8 +44,8 @@ class SignupScreen extends StatelessWidget {
                           color: comPrimaryColor,
                         ),
                       ),
-                      Spacer(),
-                      ComTextFormField(
+                      height31,
+                      const ComTextFormField(
                         hintText: "password",
                         prefixIcon: Icon(
                           Icons.lock_outline,
@@ -52,35 +53,26 @@ class SignupScreen extends StatelessWidget {
                           color: comPrimaryColor,
                         ),
                       ),
-                      Spacer(),
-                      ComTextFormField(
+                      height31,
+                      const ComTextFormField(
                         hintText: "name",
                         prefixIcon: Icon(
-                          Icons.person_outlined,
+                          Icons.face_outlined,
                           size: 24,
                           color: comPrimaryColor,
                         ),
                       ),
-                      Spacer(),
-                      ComTextFormField(
+                      height31,
+                      const ComTextFormField(
                         hintText: "lastname",
                         prefixIcon: Icon(
-                          Icons.group_outlined,
+                          Icons.face_outlined,
                           size: 24,
                           color: comPrimaryColor,
                         ),
                       ),
-                      Spacer(),
-                      ComTextFormField(
-                        hintText: "email",
-                        prefixIcon: Icon(
-                          Icons.mail_outline,
-                          size: 24,
-                          color: comPrimaryColor,
-                        ),
-                      ),
-                      Spacer(),
-                      ComTextFormField(
+                      height31,
+                      const ComTextFormField(
                         hintText: "phone",
                         prefixIcon: Icon(
                           Icons.smartphone_outlined,
@@ -88,20 +80,16 @@ class SignupScreen extends StatelessWidget {
                           color: comPrimaryColor,
                         ),
                       ),
-                      Spacer(),
                     ],
                   ),
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: ComButton(
-                        onPressed: () {},
-                        textButton: const Text("สมัครสมาชิก")),
-                  ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: ComButton(
+                      onPressed: () {}, textButton: const Text("สมัครสมาชิก")),
                 ),
               ),
               const SizedBox(height: 35),

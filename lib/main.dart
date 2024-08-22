@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'Kanit',
-        textTheme: TextTheme(button: ComFontStyle.medium16),
+        textTheme: TextTheme(labelLarge: ComFontStyle.medium16),
         useMaterial3: true,
       ),
       home: const SigninScreen(),

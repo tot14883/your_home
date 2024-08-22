@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
@@ -18,11 +20,11 @@ class SigninScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: Container(
+              child: SvgPicture.asset(
+                "assets/images/logo/logo_hommy.svg",
+                semanticsLabel: 'Hommy Logo',
                 width: 200,
                 height: 200,
-                decoration: const BoxDecoration(
-                    color: comSecondaryColor, shape: BoxShape.circle),
               ),
             ),
             Expanded(
@@ -52,11 +54,19 @@ class SigninScreen extends StatelessWidget {
                     const SizedBox(height: 12),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: Text(
-                        "ลืมรหัสผ่าน",
-                        style: ComFontStyle.regular14.copyWith(
-                            color: comPrimaryColor,
-                            decoration: TextDecoration.underline),
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        ),
+                        child: Text(
+                          "ลืมรหัสผ่าน",
+                          style: ComFontStyle.regular14.copyWith(
+                              color: comPrimaryColor,
+                              decoration: TextDecoration.underline),
+                        ),
                       ),
                     ),
                     const SizedBox(
