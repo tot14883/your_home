@@ -14,7 +14,7 @@ class SigninScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: comPrimaryColor,
+        color: Colors.white,
         child: Column(
           children: [
             Expanded(
@@ -49,6 +49,16 @@ class SigninScreen extends StatelessWidget {
                         color: comPrimaryColor,
                       ),
                     ),
+                    const SizedBox(height: 12),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "ลืมรหัสผ่าน",
+                        style: ComFontStyle.regular14.copyWith(
+                            color: comPrimaryColor,
+                            decoration: TextDecoration.underline),
+                      ),
+                    ),
                     const SizedBox(
                       height: 60,
                     ),
@@ -71,13 +81,13 @@ class SigninScreen extends StatelessWidget {
               text: TextSpan(
                 text: 'คุณได้เป็นสมาชิกหรือไม่ ?',
                 style: ComFontStyle.regular16.copyWith(
-                  color: Colors.white,
+                  color: comPrimaryColor,
                 ),
                 children: [
                   TextSpan(
                     text: ' สมัครสมาชิก',
                     style: ComFontStyle.regular16.copyWith(
-                      color: Colors.white,
+                      color: comPrimaryColor,
                       decoration: TextDecoration.underline,
                     ),
                     recognizer: TapGestureRecognizer()

@@ -26,21 +26,21 @@ class ComTextFormField extends StatelessWidget {
       decoration: InputDecoration(
           isDense: true,
           filled: true,
-          fillColor: comQuaternaryColor,
+          fillColor: Colors.white,
           prefixIcon: prefixIcon,
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+          // contentPadding:
+          //     const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(13.00)),
-              borderSide: BorderSide(color: Colors.transparent)),
+              borderSide: BorderSide(color: comPrimaryColor)),
           disabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(13.00)),
-              borderSide: BorderSide(color: Colors.transparent)),
+              borderSide: BorderSide(color: Colors.grey)),
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(13.00)),
-              borderSide: BorderSide(color: Colors.transparent)),
+              borderSide: BorderSide(color: comPrimaryColor)),
           hintText: hintText,
-          hintStyle: ComFontStyle.medium16),
+          hintStyle: ComFontStyle.medium16.copyWith(color: comPrimaryColor)),
     );
   }
 }

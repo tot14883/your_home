@@ -12,13 +12,13 @@ class ComButton extends StatelessWidget {
   final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            backgroundColor: comTertiaryColor,
-            foregroundColor: comPrimaryColor,
+            backgroundColor: comSecondaryColor,
+            foregroundColor: Colors.white,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12)),
