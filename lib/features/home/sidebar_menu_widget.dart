@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 
@@ -10,86 +11,192 @@ class SidebarMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: comSecondaryColor,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15),
-            child: Column(
+      backgroundColor: Colors.white,
+      child: SafeArea(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+            Column(
               children: [
-                const SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 21),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            "assets/images/logo/avatar.svg",
+                            width: 64,
+                            height: 64,
+                          ),
+                          // Container(
+                          //   width: 64,
+                          //   height: 64,
+                          //   decoration: const BoxDecoration(
+                          //     color: Colors.pink,
+                          //     shape: BoxShape.circle,
+                          //   ),
+                          // ),
+                          const SizedBox(width: 18),
+                          Text(
+                            "อาริตา อรัญยกุล",
+                            style: ComFontStyle.medium18
+                                .copyWith(color: comPrimaryColor),
+                          )
+                        ],
+                      ),
+                      const SizedBox(height: 18),
+                      const Divider(color: comPrimaryColor),
+                      const SizedBox(height: 13),
+                    ],
                   ),
                 ),
-                const SizedBox(
-                  height: 33,
-                ),
-                Column(
-                  children: [
-                    ListTile(
-                      onTap: () {},
-                      shape: const Border(
-                        top: BorderSide(color: Colors.white, width: 0.7),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const TitleSidebar(title: "บ้าน"),
+                      const SizedBox(height: 13),
+                      ListTileSidebar(
+                        title: "บ้านเดี่ยว",
+                        icon: const Icon(
+                          Icons.home_outlined,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: Colors.white,
+                        onTap: () {},
                       ),
-                      leading: const Icon(
-                        Icons.cottage_rounded,
-                        color: Colors.white,
+                      ListTileSidebar(
+                        title: "Town Home",
+                        icon: const Icon(
+                          Icons.holiday_village_rounded,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: Colors.white,
+                        onTap: () {},
                       ),
-                      title: const Text("บ้านเดี่ยว"),
-                      textColor: Colors.white,
-                      titleTextStyle: ComFontStyle.medium16,
-                    ),
-                    ListTile(
-                      onTap: () {},
-                      shape: const Border(
-                        top: BorderSide(color: Colors.white, width: 0.7),
+                      ListTileSidebar(
+                        title: "Condominium",
+                        icon: const Icon(
+                          Icons.apartment_rounded,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: comSecondaryColor,
+                        onTap: () {},
                       ),
-                      leading: const Icon(
-                        Icons.holiday_village_rounded,
-                        color: Colors.white,
+                      const Divider(color: comPrimaryColor),
+                      const SizedBox(height: 13),
+                      const TitleSidebar(title: "ขาย"),
+                      const SizedBox(height: 13),
+                      ListTileSidebar(
+                        title: "ขายบ้าน",
+                        icon: const Icon(
+                          Icons.sell_outlined,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: Colors.white,
+                        onTap: () {},
                       ),
-                      title: const Text("ทาวน์เฮ้าส์"),
-                      textColor: Colors.white,
-                      titleTextStyle: ComFontStyle.medium16,
-                    ),
-                    ListTile(
-                      onTap: () {},
-                      shape: const Border(
-                        top: BorderSide(color: Colors.white, width: 0.7),
-                        bottom: BorderSide(color: Colors.white, width: 0.5),
+                      ListTileSidebar(
+                        title: "โพสต์ของฉัน",
+                        icon: const Icon(
+                          Icons.folder_open_outlined,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: Colors.white,
+                        onTap: () {},
                       ),
-                      leading: const Icon(
-                        Icons.apartment_rounded,
-                        color: Colors.white,
+                      const Divider(color: comPrimaryColor),
+                      const SizedBox(height: 13),
+                      const TitleSidebar(title: "ข้อมูลของฉัน"),
+                      const SizedBox(height: 13),
+                      ListTileSidebar(
+                        title: "ข้อมูลของฉัน",
+                        icon: const Icon(
+                          Icons.account_circle_outlined,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: Colors.white,
+                        onTap: () {},
                       ),
-                      title: const Text("คอนโดมิเนียม"),
-                      textColor: Colors.white,
-                      titleTextStyle: ComFontStyle.medium16,
-                    ),
-                  ],
+                      ListTileSidebar(
+                        title: "ออกจากระบบ",
+                        icon: const Icon(
+                          Icons.logout_outlined,
+                          color: comPrimaryColor,
+                        ),
+                        textColor: comPrimaryColor,
+                        tileColor: Colors.white,
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-          ),
-          ListTile(
-            onTap: () {},
-            leading: const Icon(
-              Icons.login_rounded,
-              color: Colors.white,
-            ),
-            title: const Text("Login"),
-            textColor: Colors.white,
-            titleTextStyle: ComFontStyle.medium16,
-          ),
-        ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ListTileSidebar extends StatelessWidget {
+  const ListTileSidebar({
+    super.key,
+    required this.title,
+    required this.icon,
+    required this.textColor,
+    required this.tileColor,
+    this.onTap,
+  });
+  final String title;
+  final Icon icon;
+  final Color textColor, tileColor;
+  final Function()? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      onTap: onTap,
+      leading: icon,
+      title: Text(title),
+      textColor: textColor,
+      titleTextStyle: ComFontStyle.medium16,
+      tileColor: tileColor,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(12),
+        ),
+      ),
+    );
+  }
+}
+
+class TitleSidebar extends StatelessWidget {
+  const TitleSidebar({
+    super.key,
+    required this.title,
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 21),
+      child: Text(
+        title,
+        style: ComFontStyle.medium16.copyWith(color: comPrimaryColor),
       ),
     );
   }
