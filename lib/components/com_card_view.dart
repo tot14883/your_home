@@ -29,7 +29,6 @@ class ComCardView extends StatelessWidget {
           debugPrint('Card tapped.');
         },
         child: SizedBox(
-          width: 162,
           child: Column(
             children: [
               Expanded(

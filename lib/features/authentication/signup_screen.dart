@@ -10,11 +10,12 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizedBox height13 = const SizedBox(height: 13);
     SizedBox height31 = const SizedBox(height: 31);
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
+      backgroundColor: comPrimaryColor,
       body: SafeArea(
+        bottom: false,
         child: Container(
           color: Colors.white,
           child: Column(
@@ -88,8 +89,7 @@ class SignupScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Align(
                   alignment: Alignment.bottomCenter,
-                  child: ComButton(
-                      onPressed: () {}, textButton: const Text("สมัครสมาชิก")),
+                  child: ComButton(onPressed: () {}, textButton: "สมัครสมาชิก"),
                 ),
               ),
               const SizedBox(height: 35),

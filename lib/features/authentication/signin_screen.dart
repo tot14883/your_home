@@ -73,7 +73,7 @@ class SigninScreen extends StatelessWidget {
                       height: 60,
                     ),
                     ComButton(
-                      textButton: const Text("เข้าสู้ระบบ"),
+                      textButton: "เข้าสู้ระบบ",
                       onPressed: () {
                         Navigator.push(
                           context,

@@ -81,8 +81,7 @@ class MainDetailScreen extends StatelessWidget {
                       const SizedBox(
                         height: 34,
                       ),
-                      ComButton(
-                          textButton: const Text("ค้นหา"), onPressed: () {}),
+                      ComButton(textButton: "ค้นหา", onPressed: () {}),
                       const SizedBox(height: 21),
                       Expanded(
                         child: GridView.count(

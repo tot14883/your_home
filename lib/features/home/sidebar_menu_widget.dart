@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 
-class SidebarMenu extends StatelessWidget {
+class SidebarMenu extends StatefulWidget {
   const SidebarMenu({
     super.key,
+    required this.onChanged,
+    required this.currentPage,
+    required this.scaffoldGlobalkey,
   });
 
+  final Function(dynamic) onChanged;
+  final int currentPage;
+  final GlobalKey<ScaffoldState> scaffoldGlobalkey;
+
+  @override
+  State<SidebarMenu> createState() => _SidebarMenuState();
+}
+
+class _SidebarMenuState extends State<SidebarMenu> {
+  bool select = false;
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -26,19 +38,23 @@ class SidebarMenu extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset(
-                            "assets/images/logo/avatar.svg",
-                            width: 64,
-                            height: 64,
-                          ),
-                          // Container(
+                          // SvgPicture.asset(
+                          //   "assets/images/logo/avatar.svg",
                           //   width: 64,
                           //   height: 64,
-                          //   decoration: const BoxDecoration(
-                          //     color: Colors.pink,
-                          //     shape: BoxShape.circle,
-                          //   ),
                           // ),
+                          Container(
+                            width: 64,
+                            height: 64,
+                            decoration: const BoxDecoration(
+                              color: Colors.pink,
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                image:
+                                    AssetImage("assets/images/logo/avatar.jpg"),
+                              ),
+                            ),
+                          ),
                           const SizedBox(width: 18),
                           Text(
                             "อาริตา อรัญยกุล",
@@ -62,33 +78,60 @@ class SidebarMenu extends StatelessWidget {
                       const SizedBox(height: 13),
                       ListTileSidebar(
                         title: "บ้านเดี่ยว",
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.home_outlined,
-                          color: comPrimaryColor,
+                          color: widget.currentPage == 0
+                              ? Colors.white
+                              : comPrimaryColor,
                         ),
-                        textColor: comPrimaryColor,
-                        tileColor: Colors.white,
-                        onTap: () {},
+                        textColor: widget.currentPage == 0
+                            ? Colors.white
+                            : comPrimaryColor,
+                        tileColor: widget.currentPage == 0
+                            ? comSecondaryColor
+                            : Colors.white,
+                        onTap: () {
+                          widget.onChanged(0);
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                        },
                       ),
                       ListTileSidebar(
                         title: "Town Home",
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.holiday_village_rounded,
-                          color: comPrimaryColor,
+                          color: widget.currentPage == 1
+                              ? Colors.white
+                              : comPrimaryColor,
                         ),
-                        textColor: comPrimaryColor,
-                        tileColor: Colors.white,
-                        onTap: () {},
+                        textColor: widget.currentPage == 1
+                            ? Colors.white
+                            : comPrimaryColor,
+                        tileColor: widget.currentPage == 1
+                            ? comSecondaryColor
+                            : Colors.white,
+                        onTap: () {
+                          widget.onChanged(1);
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                        },
                       ),
                       ListTileSidebar(
                         title: "Condominium",
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.apartment_rounded,
-                          color: comPrimaryColor,
+                          color: widget.currentPage == 2
+                              ? Colors.white
+                              : comPrimaryColor,
                         ),
-                        textColor: comPrimaryColor,
-                        tileColor: comSecondaryColor,
-                        onTap: () {},
+                        textColor: widget.currentPage == 2
+                            ? Colors.white
+                            : comPrimaryColor,
+                        tileColor: widget.currentPage == 2
+                            ? comSecondaryColor
+                            : Colors.white,
+                        onTap: () {
+                          widget.onChanged(2);
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                        },
                       ),
                       const Divider(color: comPrimaryColor),
                       const SizedBox(height: 13),
