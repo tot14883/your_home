@@ -13,6 +13,7 @@ class HomeHomeScreenModel {
   final String badroom;
   final String bathroom;
   final String location;
+  final String price;
   final String image;
 
   HomeHomeScreenModel(
@@ -21,6 +22,7 @@ class HomeHomeScreenModel {
       required this.badroom,
       required this.bathroom,
       required this.location,
+      required this.price,
       required this.image});
 }
 
@@ -30,6 +32,7 @@ class TownHouseHomeScreenModel {
   final String badroom;
   final String bathroom;
   final String location;
+  final String price;
   final String image;
 
   TownHouseHomeScreenModel(
@@ -38,6 +41,7 @@ class TownHouseHomeScreenModel {
       required this.badroom,
       required this.bathroom,
       required this.location,
+      required this.price,
       required this.image});
 }
 
@@ -47,6 +51,7 @@ class CondoHomeScreenModel {
   final String badroom;
   final String bathroom;
   final String location;
+  final String price;
   final String image;
 
   CondoHomeScreenModel(
@@ -55,6 +60,7 @@ class CondoHomeScreenModel {
       required this.badroom,
       required this.bathroom,
       required this.location,
+      required this.price,
       required this.image});
 }
 
@@ -66,6 +72,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "3",
       bathroom: "4",
       location: "เชียงใหม่",
+      price: "1200000",
       image: "assets/images/homes/home_1.jpg",
     ),
     HomeHomeScreenModel(
@@ -74,6 +81,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "4",
       bathroom: "5",
       location: "กาญจนบุรี",
+      price: "1500000",
       image: "assets/images/homes/home_2.jpg",
     ),
     HomeHomeScreenModel(
@@ -82,6 +90,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "2",
       bathroom: "3",
       location: "ขอนแก่น",
+      price: "2000000",
       image: "assets/images/homes/home_3.jpg",
     ),
     HomeHomeScreenModel(
@@ -90,6 +99,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "3",
       bathroom: "4",
       location: "เลย",
+      price: "2500000",
       image: "assets/images/homes/home_4.jpg",
     ),
     HomeHomeScreenModel(
@@ -98,6 +108,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "4",
       bathroom: "6",
       location: "ภูเกต",
+      price: "3000000",
       image: "assets/images/homes/home_5.jpg",
     ),
   ],
@@ -108,6 +119,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "2",
       bathroom: "3",
       location: "เชียงใหม่",
+      price: "1200000",
       image: "assets/images/townhouse/townhouse_1.jpg",
     ),
     TownHouseHomeScreenModel(
@@ -115,7 +127,8 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       name: "ทาวน์เฮ้าส์ร่มเย็น",
       badroom: "3",
       bathroom: "4",
-      location: "กรุงเทพ",
+      location: "กรุงเทพมหานคร",
+      price: "1500000",
       image: "assets/images/townhouse/townhouse_2.jpg",
     ),
     TownHouseHomeScreenModel(
@@ -124,6 +137,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "3",
       bathroom: "4",
       location: "ปทุมธานี",
+      price: "2000000",
       image: "assets/images/townhouse/townhouse_3.jpg",
     ),
     TownHouseHomeScreenModel(
@@ -132,6 +146,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "2",
       bathroom: "3",
       location: "อยุธยา",
+      price: "2500000",
       image: "assets/images/townhouse/townhouse_4.jpg",
     ),
     TownHouseHomeScreenModel(
@@ -140,6 +155,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "2",
       bathroom: "3",
       location: "ภูเกต",
+      price: "3000000",
       image: "assets/images/townhouse/townhouse_5.jpg",
     ),
   ],
@@ -150,6 +166,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       badroom: "1",
       bathroom: "2",
       location: "ภูเกต",
+      price: "1200000",
       image: "assets/images/condo/condo_1.jpg",
     ),
     CondoHomeScreenModel(
@@ -157,7 +174,8 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       name: "คอนโดมหาแฮง",
       badroom: "2",
       bathroom: "2",
-      location: "กรุงเทพ",
+      location: "กรุงเทพมหานคร",
+      price: "1500000",
       image: "assets/images/condo/condo_2.jpg",
     ),
     CondoHomeScreenModel(
@@ -165,7 +183,8 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       name: "คอนโดพารวย",
       badroom: "2",
       bathroom: "3",
-      location: "กรุงเทพ",
+      location: "กรุงเทพมหานคร",
+      price: "2000000",
       image: "assets/images/condo/condo_3.jpg",
     ),
     CondoHomeScreenModel(
@@ -173,7 +192,8 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       name: "คอนโดมีสุข",
       badroom: "1",
       bathroom: "2",
-      location: "กรุงเทพ",
+      location: "กรุงเทพมหานคร",
+      price: "2500000",
       image: "assets/images/condo/condo_4.jpg",
     ),
     CondoHomeScreenModel(
@@ -181,7 +201,8 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       name: "คอนโดมหาสงบ",
       badroom: "2",
       bathroom: "3",
-      location: "กรุงเทพ",
+      location: "กรุงเทพมหานคร",
+      price: "3000000",
       image: "assets/images/condo/condo_5.jpg",
     ),
   ],

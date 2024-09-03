@@ -5,6 +5,7 @@ import 'package:home_demo/components/com_font_style.dart';
 class ComTextFormField extends StatelessWidget {
   const ComTextFormField({
     super.key,
+    this.controller,
     this.hintText,
     this.lable,
     this.onChanged,
@@ -12,6 +13,7 @@ class ComTextFormField extends StatelessWidget {
     this.prefixIcon,
   });
 
+  final TextEditingController? controller;
   final String? hintText;
   final String? lable;
   final Function(String)? onChanged;
@@ -21,6 +23,7 @@ class ComTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       onFieldSubmitted: onFieldSubmitted,
       onChanged: onChanged,
       decoration: InputDecoration(
