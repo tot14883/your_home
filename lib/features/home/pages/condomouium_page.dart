@@ -154,6 +154,7 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                             badroom: condoData[index].badroom,
                             bathroom: condoData[index].bathroom,
                             location: condoData[index].location,
+                            price: condoData[index].price,
                             image: condoData[index].image,
                           );
                         },

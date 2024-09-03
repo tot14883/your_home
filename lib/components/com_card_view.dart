@@ -9,6 +9,7 @@ class ComCardView extends StatelessWidget {
     this.badroom,
     this.bathroom,
     this.location,
+    this.price,
     this.image,
     this.onTap,
   });
@@ -17,6 +18,7 @@ class ComCardView extends StatelessWidget {
   final String? badroom;
   final String? bathroom;
   final String? location;
+  final String? price;
   final String? image;
   final Function()? onTap;
   @override
@@ -84,6 +86,17 @@ class ComCardView extends StatelessWidget {
                               .copyWith(color: Colors.white),
                         ),
                       ],
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "฿ $price",
+                      style:
+                          ComFontStyle.regular14.copyWith(color: Colors.white),
+                    ),
+                    const SizedBox(
+                      width: 8,
                     ),
                     Text(
                       location ?? "",

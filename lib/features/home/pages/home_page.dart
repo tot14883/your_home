@@ -154,6 +154,7 @@ class _HomePageState extends State<HomePage> {
                             badroom: homeData[index].badroom,
                             bathroom: homeData[index].bathroom,
                             location: homeData[index].location,
+                            price: homeData[index].price,
                             image: homeData[index].image,
                           );
                         },

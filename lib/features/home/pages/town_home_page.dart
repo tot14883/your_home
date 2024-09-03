@@ -154,6 +154,7 @@ class TownHomePageState extends State<TownHomePage> {
                             badroom: townHomeData[index].badroom,
                             bathroom: townHomeData[index].bathroom,
                             location: townHomeData[index].location,
+                            price: townHomeData[index].price,
                             image: townHomeData[index].image,
                           );
                         },

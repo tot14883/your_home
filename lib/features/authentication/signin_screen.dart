@@ -75,7 +75,7 @@ class SigninScreen extends StatelessWidget {
                     ComButton(
                       textButton: "เข้าสู้ระบบ",
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const HomeScreen(),
