@@ -27,9 +27,7 @@ class ComCardView extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
-        onTap: () {
-          debugPrint('Card tapped.');
-        },
+        onTap: onTap,
         child: SizedBox(
           child: Column(
             children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
+import 'package:home_demo/features/sale/sale.dart';
 
 class SidebarMenu extends StatefulWidget {
   const SidebarMenu({
@@ -145,7 +146,14 @@ class _SidebarMenuState extends State<SidebarMenu> {
                         ),
                         textColor: comPrimaryColor,
                         tileColor: Colors.white,
-                        onTap: () {},
+                        onTap: () {
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SaleScreen(),
+                              ));
+                        },
                       ),
                       ListTileSidebar(
                         title: "โพสต์ของฉัน",

@@ -21,7 +21,7 @@ class SigninScreen extends StatelessWidget {
           children: [
             Expanded(
               child: SvgPicture.asset(
-                "assets/images/logo/logo_hommy.svg",
+                "assets/images/logo/logo_your_home.svg",
                 semanticsLabel: 'Hommy Logo',
                 width: 200,
                 height: 200,

@@ -20,13 +20,13 @@ class SignupScreen extends StatelessWidget {
           color: Colors.white,
           child: Column(
             children: [
-              const ComAppbar(
-                iconBackColor: Colors.white,
-                textColor: Colors.white,
+              ComAppbar(
+                onPop: () => Navigator.pop(context),
+                text: "สมัครสมาชิก",
               ),
               height31,
               SvgPicture.asset(
-                "assets/images/logo/logo_hommy.svg",
+                "assets/images/logo/logo_your_home.svg",
                 width: 117,
                 height: 117,
               ),

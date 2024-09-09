@@ -4,6 +4,7 @@ import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_card_view.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_dropdown.dart';
+import 'package:home_demo/features/detail/main_detail_screen.dart';
 import 'package:home_demo/models/data_home_screen_model.dart';
 import 'package:home_demo/models/location_model.dart';
 import 'package:home_demo/models/price_model.dart';
@@ -150,6 +151,13 @@ class TownHomePageState extends State<TownHomePage> {
                         itemCount: townHomeData.length,
                         itemBuilder: (context, index) {
                           return ComCardView(
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MainDetailScreen(
+                                    id: townHomeData[index].id, type: ""),
+                              ),
+                            ),
                             name: townHomeData[index].name,
                             badroom: townHomeData[index].badroom,
                             bathroom: townHomeData[index].bathroom,

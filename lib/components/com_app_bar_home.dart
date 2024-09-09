@@ -16,7 +16,7 @@ class ComAppBarHome extends StatelessWidget {
       color: comPrimaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 15),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
             iconSize: 30,
@@ -28,9 +28,15 @@ class ComAppBarHome extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Text(
-            "HOMMY",
-            style: ComFontStyle.medium18.copyWith(color: Colors.white),
+          Expanded(
+            child: Container(
+              margin: const EdgeInsets.only(right: 20),
+              child: Text(
+                "YOURHOME",
+                style: ComFontStyle.medium18.copyWith(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+            ),
           ),
           const Icon(
             Icons.account_circle_outlined,
