@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 import 'package:home_demo/features/authentication/signin_screen.dart';
 import 'package:home_demo/features/home/home_screen.dart';
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Kanit',
         textTheme: TextTheme(labelLarge: ComFontStyle.medium16),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: comPrimaryColor,
+        ),
       ),
       // home: const SigninScreen(),
       home: HomeScreen(),

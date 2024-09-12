@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_app_bar.dart';
-import 'package:home_demo/components/com_carousel_Image.dart';
+import 'package:home_demo/components/com_carousel_image.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 import 'package:home_demo/components/com_shape_circle.dart';

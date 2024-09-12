@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
+import 'package:home_demo/features/post/my_post_screen.dart';
 import 'package:home_demo/features/sale/sale.dart';
 
 class SidebarMenu extends StatefulWidget {
@@ -163,7 +164,15 @@ class _SidebarMenuState extends State<SidebarMenu> {
                         ),
                         textColor: comPrimaryColor,
                         tileColor: Colors.white,
-                        onTap: () {},
+                        onTap: () {
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyPostScreen(),
+                            ),
+                          );
+                        },
                       ),
                       const Divider(color: comPrimaryColor),
                       const SizedBox(height: 13),
