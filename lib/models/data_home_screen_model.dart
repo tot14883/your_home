@@ -15,15 +15,40 @@ class HomeHomeScreenModel {
   final String location;
   final String price;
   final String image;
+  final bool selectDel;
 
-  HomeHomeScreenModel(
-      {required this.id,
-      required this.name,
-      required this.badroom,
-      required this.bathroom,
-      required this.location,
-      required this.price,
-      required this.image});
+  HomeHomeScreenModel({
+    required this.id,
+    required this.name,
+    required this.badroom,
+    required this.bathroom,
+    required this.location,
+    required this.price,
+    required this.image,
+    required this.selectDel,
+  });
+
+  HomeHomeScreenModel copyWith({
+    String? id,
+    String? name,
+    String? badroom,
+    String? bathroom,
+    String? location,
+    String? price,
+    String? image,
+    bool? selectDel,
+  }) {
+    return HomeHomeScreenModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      badroom: badroom ?? this.badroom,
+      bathroom: bathroom ?? this.bathroom,
+      location: location ?? this.location,
+      price: price ?? this.price,
+      image: image ?? this.image,
+      selectDel: selectDel ?? this.selectDel,
+    );
+  }
 }
 
 class TownHouseHomeScreenModel {
@@ -34,15 +59,40 @@ class TownHouseHomeScreenModel {
   final String location;
   final String price;
   final String image;
+  final bool selectDel;
 
-  TownHouseHomeScreenModel(
-      {required this.id,
-      required this.name,
-      required this.badroom,
-      required this.bathroom,
-      required this.location,
-      required this.price,
-      required this.image});
+  TownHouseHomeScreenModel({
+    required this.id,
+    required this.name,
+    required this.badroom,
+    required this.bathroom,
+    required this.location,
+    required this.price,
+    required this.image,
+    required this.selectDel,
+  });
+
+  TownHouseHomeScreenModel copyWith({
+    String? id,
+    String? name,
+    String? badroom,
+    String? bathroom,
+    String? location,
+    String? price,
+    String? image,
+    bool? selectDel,
+  }) {
+    return TownHouseHomeScreenModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      badroom: badroom ?? this.badroom,
+      bathroom: bathroom ?? this.bathroom,
+      location: location ?? this.location,
+      price: price ?? this.price,
+      image: image ?? this.image,
+      selectDel: selectDel ?? this.selectDel,
+    );
+  }
 }
 
 class CondoHomeScreenModel {
@@ -53,15 +103,40 @@ class CondoHomeScreenModel {
   final String location;
   final String price;
   final String image;
+  final bool selectDel;
 
-  CondoHomeScreenModel(
-      {required this.id,
-      required this.name,
-      required this.badroom,
-      required this.bathroom,
-      required this.location,
-      required this.price,
-      required this.image});
+  CondoHomeScreenModel({
+    required this.id,
+    required this.name,
+    required this.badroom,
+    required this.bathroom,
+    required this.location,
+    required this.price,
+    required this.image,
+    required this.selectDel,
+  });
+
+  CondoHomeScreenModel copyWith({
+    String? id,
+    String? name,
+    String? badroom,
+    String? bathroom,
+    String? location,
+    String? price,
+    String? image,
+    bool? selectDel,
+  }) {
+    return CondoHomeScreenModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      badroom: badroom ?? this.badroom,
+      bathroom: bathroom ?? this.bathroom,
+      location: location ?? this.location,
+      price: price ?? this.price,
+      image: image ?? this.image,
+      selectDel: selectDel ?? this.selectDel,
+    );
+  }
 }
 
 DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
@@ -74,6 +149,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "เชียงใหม่",
       price: "1200000",
       image: "assets/images/homes/home_1.jpg",
+      selectDel: false,
     ),
     HomeHomeScreenModel(
       id: "H000002",
@@ -83,6 +159,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "กาญจนบุรี",
       price: "1500000",
       image: "assets/images/homes/home_2.jpg",
+      selectDel: false,
     ),
     HomeHomeScreenModel(
       id: "H000003",
@@ -92,6 +169,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "ขอนแก่น",
       price: "2000000",
       image: "assets/images/homes/home_3.jpg",
+      selectDel: false,
     ),
     HomeHomeScreenModel(
       id: "H000004",
@@ -101,6 +179,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "เลย",
       price: "2500000",
       image: "assets/images/homes/home_4.jpg",
+      selectDel: false,
     ),
     HomeHomeScreenModel(
       id: "H000005",
@@ -110,6 +189,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "ภูเกต",
       price: "3000000",
       image: "assets/images/homes/home_5.jpg",
+      selectDel: false,
     ),
   ],
   townhouse: [
@@ -121,6 +201,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "เชียงใหม่",
       price: "1200000",
       image: "assets/images/townhouse/townhouse_1.jpg",
+      selectDel: false,
     ),
     TownHouseHomeScreenModel(
       id: "T000002",
@@ -130,6 +211,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "กรุงเทพมหานคร",
       price: "1500000",
       image: "assets/images/townhouse/townhouse_2.jpg",
+      selectDel: false,
     ),
     TownHouseHomeScreenModel(
       id: "T000003",
@@ -139,6 +221,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "ปทุมธานี",
       price: "2000000",
       image: "assets/images/townhouse/townhouse_3.jpg",
+      selectDel: false,
     ),
     TownHouseHomeScreenModel(
       id: "T000004",
@@ -148,6 +231,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "อยุธยา",
       price: "2500000",
       image: "assets/images/townhouse/townhouse_4.jpg",
+      selectDel: false,
     ),
     TownHouseHomeScreenModel(
       id: "T000005",
@@ -157,6 +241,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "ภูเกต",
       price: "3000000",
       image: "assets/images/townhouse/townhouse_5.jpg",
+      selectDel: false,
     ),
   ],
   condo: [
@@ -168,6 +253,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "ภูเกต",
       price: "1200000",
       image: "assets/images/condo/condo_1.jpg",
+      selectDel: false,
     ),
     CondoHomeScreenModel(
       id: "C000002",
@@ -177,6 +263,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "กรุงเทพมหานคร",
       price: "1500000",
       image: "assets/images/condo/condo_2.jpg",
+      selectDel: false,
     ),
     CondoHomeScreenModel(
       id: "C000003",
@@ -186,6 +273,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "กรุงเทพมหานคร",
       price: "2000000",
       image: "assets/images/condo/condo_3.jpg",
+      selectDel: false,
     ),
     CondoHomeScreenModel(
       id: "C000004",
@@ -195,6 +283,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "กรุงเทพมหานคร",
       price: "2500000",
       image: "assets/images/condo/condo_4.jpg",
+      selectDel: false,
     ),
     CondoHomeScreenModel(
       id: "C00000",
@@ -204,6 +293,7 @@ DataHomeScreenModel dataHomeScreen = DataHomeScreenModel(
       location: "กรุงเทพมหานคร",
       price: "3000000",
       image: "assets/images/condo/condo_5.jpg",
+      selectDel: false,
     ),
   ],
 );
