@@ -6,9 +6,11 @@ class ComAppBarHome extends StatelessWidget {
   const ComAppBarHome({
     super.key,
     required this.scaffoldGlobalkey,
+    required this.suffixIcon,
   });
 
   final GlobalKey<ScaffoldState> scaffoldGlobalkey;
+  final Widget suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,6 @@ class ComAppBarHome extends StatelessWidget {
       color: comPrimaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 15),
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
             iconSize: 30,
@@ -38,11 +39,7 @@ class ComAppBarHome extends StatelessWidget {
               ),
             ),
           ),
-          const Icon(
-            Icons.account_circle_outlined,
-            size: 30,
-            color: Colors.white,
-          ),
+          suffixIcon,
         ],
       ),
     );

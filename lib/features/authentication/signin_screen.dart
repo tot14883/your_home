@@ -6,6 +6,7 @@ import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 import 'package:home_demo/components/com_text_formfield.dart';
+import 'package:home_demo/features/authentication/change_password_screen.dart';
 import 'package:home_demo/features/authentication/signup_screen.dart';
 import 'package:home_demo/features/home/home_screen.dart';
 
@@ -58,7 +59,7 @@ class SigninScreen extends StatelessWidget {
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) => const ChangePasswordScreen(),
                           ),
                         ),
                         child: Text(
@@ -105,7 +106,8 @@ class SigninScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SignupScreen()),
+                            builder: (context) => const SignupScreen(),
+                          ),
                         );
                       },
                   ),

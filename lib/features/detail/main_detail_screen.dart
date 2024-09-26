@@ -55,14 +55,12 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         const SizedBox(height: 24),
                         Text(
                           textDetail,
-                          style: ComFontStyle.regular14
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.regular14,
                         ),
                         const SizedBox(height: 26),
                         Text(
                           "ข้อมูลบ้าน",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
                         const Column(
@@ -123,8 +121,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         const SizedBox(height: 26),
                         Text(
                           "แปลนบ้าน",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
                         SizedBox(
@@ -142,8 +139,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         const SizedBox(height: 26),
                         Text(
                           "รูปภาพ",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
                         SizedBox(
@@ -161,8 +157,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         const SizedBox(height: 26),
                         Text(
                           "ทำเลที่ตั้ง",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
                         const Column(
@@ -207,8 +202,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         const SizedBox(height: 26),
                         Text(
                           "Map",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
                         Container(
@@ -222,20 +216,17 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         const SizedBox(height: 26),
                         Text(
                           "ราคา",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 8),
                         Text(
                           "1,500,000 บาท",
-                          style: ComFontStyle.medium18
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium18,
                         ),
                         const SizedBox(height: 26),
                         Text(
                           "ติดต่อสอบถาม",
-                          style: ComFontStyle.medium16
-                              .copyWith(color: comPrimaryColor),
+                          style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
                         Row(
@@ -250,8 +241,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                             ),
                             Text(
                               "0801234567",
-                              style: ComFontStyle.regular16
-                                  .copyWith(color: comPrimaryColor),
+                              style: ComFontStyle.regular16,
                             )
                           ],
                         ),
@@ -268,8 +258,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                             ),
                             Text(
                               "ID LINE",
-                              style: ComFontStyle.regular16
-                                  .copyWith(color: comPrimaryColor),
+                              style: ComFontStyle.regular16,
                             )
                           ],
                         ),
@@ -286,8 +275,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                             ),
                             Text(
                               "Facebook",
-                              style: ComFontStyle.regular16
-                                  .copyWith(color: comPrimaryColor),
+                              style: ComFontStyle.regular16,
                             )
                           ],
                         ),
@@ -304,8 +292,7 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                             ),
                             Text(
                               "yourhome.home@mail.com",
-                              style: ComFontStyle.regular16
-                                  .copyWith(color: comPrimaryColor),
+                              style: ComFontStyle.regular16,
                             )
                           ],
                         ),

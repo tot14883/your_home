@@ -27,8 +27,10 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
       backgroundColor: Colors.white,
       floatingActionButton: onOpen == false
           ? FloatingActionButton(
-              backgroundColor: comPrimaryColor,
-              shape: const CircleBorder(),
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 2, color: comPrimaryColor),
+                  borderRadius: BorderRadius.circular(100)),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -40,7 +42,7 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
               child: const Icon(
                 Icons.add,
                 size: 24,
-                color: comSecondaryColor,
+                color: comPrimaryColor,
               ),
             )
           : null,
@@ -108,7 +110,6 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
                         Expanded(
                           child: Card(
                             margin: EdgeInsets.zero,
-                            // clipBehavior: Clip.antiAlias,
                             color: Colors.white,
                             elevation: 0,
                             shape: const Border(
@@ -157,76 +158,58 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
     );
   }
 
-  Align openBtn() {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: Container(
-        width: 100,
-        height: 32,
-        // alignment: Alignment.centerRight,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: InkWell(
-                onTap: () {
-                  setState(() {
-                    townhouse = townhouse
-                        .where((element) => element.selectDel == false)
-                        .toList();
+  Widget openBtn() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        InkWell(
+          onTap: () {
+            setState(() {
+              townhouse = townhouse
+                  .where((element) => element.selectDel == false)
+                  .toList();
 
-                    if (townhouse.isEmpty) {
-                      onOpen = !onOpen;
-                    }
-                  });
-                },
-                child: Container(
-                  height: 32,
-                  decoration: const BoxDecoration(
-                    color: comPrimaryColor,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      bottomLeft: Radius.circular(16),
-                    ),
-                  ),
-                  child: const Icon(
-                    Icons.delete_outline,
-                    color: comSecondaryColor,
-                    size: 18,
-                  ),
-                ),
-              ),
+              if (townhouse.isEmpty) {
+                onOpen = !onOpen;
+              }
+            });
+          },
+          child: Container(
+            width: 43,
+            height: 43,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(width: 2, color: comPrimaryColor)),
+            child: const Icon(
+              Icons.delete_outline,
+              color: comPrimaryColor,
+              size: 18,
             ),
-            const SizedBox(width: 3),
-            Expanded(
-              child: InkWell(
-                onTap: () {
-                  setState(() {
-                    onOpen = !onOpen;
-                  });
-                },
-                child: Container(
-                  height: 32,
-                  decoration: const BoxDecoration(
-                    color: comPrimaryColor,
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(16),
-                      bottomRight: Radius.circular(16),
-                    ),
-                  ),
-                  child: const Icon(
-                    Icons.cancel_outlined,
-                    color: comSecondaryColor,
-                    size: 18,
-                  ),
-                ),
-              ),
-            )
-          ],
+          ),
         ),
-      ),
+        const SizedBox(width: 8),
+        InkWell(
+          onTap: () {
+            setState(() {
+              onOpen = !onOpen;
+            });
+          },
+          child: Container(
+            width: 43,
+            height: 43,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(width: 2, color: comPrimaryColor)),
+            child: const Icon(
+              Icons.cancel_outlined,
+              color: comPrimaryColor,
+              size: 18,
+            ),
+          ),
+        )
+      ],
     );
   }
 
@@ -240,28 +223,20 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
           });
         },
         child: Container(
-          width: 100,
-          height: 32,
-          // alignment: Alignment.centerRight,
+          width: 43,
+          height: 43,
           decoration: BoxDecoration(
-            color: comPrimaryColor,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Row(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor)),
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ...List.generate(
-                3,
-                (index) => Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: Container(
-                    width: 5,
-                    height: 5,
-                    decoration: const BoxDecoration(
-                        color: comSecondaryColor, shape: BoxShape.circle),
-                  ),
-                ),
-              ),
+              Icon(
+                Icons.delete_outline,
+                color: comPrimaryColor,
+                size: 22,
+              )
             ],
           ),
         ),

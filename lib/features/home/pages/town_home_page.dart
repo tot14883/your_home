@@ -5,6 +5,7 @@ import 'package:home_demo/components/com_card_view.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_dropdown.dart';
 import 'package:home_demo/features/detail/main_detail_screen.dart';
+import 'package:home_demo/features/profile/my_profile_screen.dart';
 import 'package:home_demo/models/data_home_screen_model.dart';
 import 'package:home_demo/models/location_model.dart';
 import 'package:home_demo/models/price_model.dart';
@@ -41,7 +42,24 @@ class TownHomePageState extends State<TownHomePage> {
         color: Colors.white,
         child: Column(
           children: [
-            ComAppBarHome(scaffoldGlobalkey: widget.scaffoldGlobalkey),
+            ComAppBarHome(
+              scaffoldGlobalkey: widget.scaffoldGlobalkey,
+              suffixIcon: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MyProfileScreen(),
+                    ),
+                  );
+                },
+                icon: const Icon(
+                  Icons.account_circle_outlined,
+                  size: 30,
+                  color: Colors.white,
+                ),
+              ),
+            ),
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(

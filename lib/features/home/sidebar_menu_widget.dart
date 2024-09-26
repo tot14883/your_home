@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
+import 'package:home_demo/features/authentication/signin_screen.dart';
 import 'package:home_demo/features/post/my_post_screen.dart';
+import 'package:home_demo/features/profile/my_profile_screen.dart';
 import 'package:home_demo/features/sale/sale.dart';
 
 class SidebarMenu extends StatefulWidget {
@@ -38,32 +40,37 @@ class _SidebarMenuState extends State<SidebarMenu> {
                   padding: const EdgeInsets.symmetric(horizontal: 21),
                   child: Column(
                     children: [
-                      Row(
-                        children: [
-                          // SvgPicture.asset(
-                          //   "assets/images/logo/avatar.svg",
-                          //   width: 64,
-                          //   height: 64,
-                          // ),
-                          Container(
-                            width: 64,
-                            height: 64,
-                            decoration: const BoxDecoration(
-                              color: Colors.pink,
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image:
-                                    AssetImage("assets/images/logo/avatar.jpg"),
+                      InkWell(
+                        onTap: () {
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyProfileScreen(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 64,
+                              height: 64,
+                              decoration: const BoxDecoration(
+                                color: comTertiaryColor,
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/logo/avatar.jpg"),
+                                ),
                               ),
                             ),
-                          ),
-                          const SizedBox(width: 18),
-                          Text(
-                            "อาริตา อรัญยกุล",
-                            style: ComFontStyle.medium18
-                                .copyWith(color: comPrimaryColor),
-                          )
-                        ],
+                            const SizedBox(width: 18),
+                            Text(
+                              "อาริตา อรัญยกุล",
+                              style: ComFontStyle.medium18,
+                            )
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 18),
                       const Divider(color: comPrimaryColor),
@@ -186,7 +193,15 @@ class _SidebarMenuState extends State<SidebarMenu> {
                         ),
                         textColor: comPrimaryColor,
                         tileColor: Colors.white,
-                        onTap: () {},
+                        onTap: () {
+                          widget.scaffoldGlobalkey.currentState!.closeDrawer();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyProfileScreen(),
+                            ),
+                          );
+                        },
                       ),
                       ListTileSidebar(
                         title: "ออกจากระบบ",
@@ -196,7 +211,16 @@ class _SidebarMenuState extends State<SidebarMenu> {
                         ),
                         textColor: comPrimaryColor,
                         tileColor: Colors.white,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) =>
+                                  const SigninScreen(),
+                            ),
+                            ModalRoute.withName('/'),
+                          );
+                        },
                       ),
                     ],
                   ),

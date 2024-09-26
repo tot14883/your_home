@@ -24,8 +24,9 @@ class MyApp extends StatelessWidget {
           seedColor: comPrimaryColor,
         ),
       ),
-      // home: const SigninScreen(),
-      home: HomeScreen(),
+
+      home: const SigninScreen(),
+      // home: HomeScreen(),
     );
   }
 }

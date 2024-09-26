@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:home_demo/components/com_app_bar.dart';
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
@@ -50,8 +49,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 24),
                           Text(
                             "ภาพรายละเอียด (สูงสุด 6 ภาพ)",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           GridView.builder(
@@ -82,8 +80,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "ทำเลที่ตั้ง",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           ComTextFormField(
@@ -138,8 +135,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "สถานที่ใกล้เคียงที่สำคัญ (สูงสุด 6 สถานที่)",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           Row(
@@ -202,8 +198,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "ที่ตั้งตาม Google Map",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           Row(
@@ -220,14 +215,9 @@ class _SaleScreenState extends State<SaleScreen> {
                               ),
                               Expanded(
                                 child: ComTextFormField(
-                                  hintText: "ลองจิจูด",
-                                  validator: (value) {
-                                    if (value == null || value.isEmpty) {
-                                      return 'Please enter text';
-                                    }
-                                    return null;
-                                  },
-                                ),
+                                    hintText: "ลองจิจูด",
+                                    validator: ValidatorText.validator(
+                                        "Please enter text")),
                               ),
                             ],
                           ),
@@ -245,8 +235,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "ข้อมูลบ้าน",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           Row(
@@ -289,8 +278,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "พื้นที่ใช้สอย",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           Row(
@@ -324,8 +312,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "พื้นที่ทั้งหมด",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           Row(
@@ -359,8 +346,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "แปลน (สูงสุด 6 ภาพ)",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           GridView.builder(
@@ -391,8 +377,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "ราคา",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           ComTextFormField(
@@ -403,8 +388,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "รายละเอียดเพิ่มเติม",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           ComTextFormField(
@@ -415,8 +399,7 @@ class _SaleScreenState extends State<SaleScreen> {
                           const SizedBox(height: 26),
                           Text(
                             "ข้อมูลติดต่อ",
-                            style: ComFontStyle.medium16
-                                .copyWith(color: comPrimaryColor),
+                            style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           ComTextFormField(
