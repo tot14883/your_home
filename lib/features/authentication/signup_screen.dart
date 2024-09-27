@@ -13,7 +13,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final keyFormData = GlobalKey<FormState>();
-    SizedBox height31 = const SizedBox(height: 21);
+    SizedBox height18 = const SizedBox(height: 18);
     return Scaffold(
       backgroundColor: comPrimaryColor,
       body: SafeArea(
@@ -26,13 +26,13 @@ class SignupScreen extends StatelessWidget {
                 onPop: () => Navigator.pop(context),
                 text: "สมัครสมาชิก",
               ),
-              height31,
+              height18,
               SvgPicture.asset(
                 "assets/images/logo/logo_your_home.svg",
                 width: 120,
                 height: 120,
               ),
-              height31,
+              height18,
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -41,7 +41,7 @@ class SignupScreen extends StatelessWidget {
                       key: keyFormData,
                       child: Column(
                         children: [
-                          height31,
+                          height18,
                           ComTextFormField(
                             hintText: "username",
                             prefixIcon: const Icon(
@@ -52,7 +52,7 @@ class SignupScreen extends StatelessWidget {
                             validator:
                                 ValidatorText.validator("Please enter text"),
                           ),
-                          height31,
+                          height18,
                           ComTextFormField(
                             hintText: "password",
                             prefixIcon: const Icon(
@@ -63,7 +63,7 @@ class SignupScreen extends StatelessWidget {
                             validator:
                                 ValidatorText.validator("Please enter text"),
                           ),
-                          height31,
+                          height18,
                           ComTextFormField(
                             hintText: "name",
                             prefixIcon: const Icon(
@@ -74,7 +74,7 @@ class SignupScreen extends StatelessWidget {
                             validator:
                                 ValidatorText.validator("Please enter text"),
                           ),
-                          height31,
+                          height18,
                           ComTextFormField(
                             hintText: "lastname",
                             prefixIcon: const Icon(
@@ -85,7 +85,7 @@ class SignupScreen extends StatelessWidget {
                             validator:
                                 ValidatorText.validator("Please enter text"),
                           ),
-                          height31,
+                          height18,
                           ComTextFormField(
                             hintText: "phone",
                             prefixIcon: const Icon(
@@ -120,7 +120,7 @@ class SignupScreen extends StatelessWidget {
                       textButton: "สมัครสมาชิก"),
                 ),
               ),
-              const SizedBox(height: 35),
+              const SizedBox(height: 32),
             ],
           ),
         ),
