@@ -6,11 +6,11 @@ class ComButton extends StatelessWidget {
   const ComButton({
     super.key,
     this.textButton,
-    required this.onPressed,
+    this.onPressed,
   });
 
   final String? textButton;
-  final void Function() onPressed;
+  final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

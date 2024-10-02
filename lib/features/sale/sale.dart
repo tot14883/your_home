@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:home_demo/components/com_app_bar.dart';
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
@@ -15,7 +18,11 @@ class SaleScreen extends StatefulWidget {
 }
 
 class _SaleScreenState extends State<SaleScreen> {
+  final ImagePicker _picker = ImagePicker();
   final _formKey = GlobalKey<FormState>();
+
+  List<XFile> listImageDetail = [];
+  List<XFile> listPlanImage = [];
 
   @override
   Widget build(BuildContext context) {
@@ -60,22 +67,59 @@ class _SaleScreenState extends State<SaleScreen> {
                               crossAxisCount: 3,
                               childAspectRatio: (itemWidth / itemHeight),
                             ),
-                            itemCount: 6,
+                            itemCount: listImageDetail.length,
                             itemBuilder: (context, index) {
-                              return const Card();
+                              return Stack(
+                                children: [
+                                  Card(
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        width: double.infinity,
+                                        child: Image.file(
+                                          File(listImageDetail[index].path),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 8,
+                                    right: 8,
+                                    child: InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          listImageDetail.removeAt(index);
+                                        });
+                                      },
+                                      child: const Icon(
+                                        Icons.cancel,
+                                        color: comSecondaryColor,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              );
                             },
                           ),
                           const SizedBox(height: 12),
                           ComButton(
                             textButton: "เพิ่มรูปภาพ",
-                            onPressed: () async {
-                              final ImagePicker _picker = ImagePicker();
-                              final XFile? photo = await _picker.pickImage(
-                                  source: ImageSource.camera);
-                              if (photo != null) {
-                                debugPrint("");
-                              }
-                            },
+                            onPressed: listImageDetail.length > 5
+                                ? null
+                                : () async {
+                                    final XFile? photo = await _picker
+                                        .pickImage(source: ImageSource.camera);
+                                    if (photo != null) {
+                                      setState(() {
+                                        listImageDetail.add(photo);
+                                      });
+                                    }
+                                  },
                           ),
                           const SizedBox(height: 26),
                           Text(
@@ -357,22 +401,59 @@ class _SaleScreenState extends State<SaleScreen> {
                               crossAxisCount: 3,
                               childAspectRatio: (itemWidth / itemHeight),
                             ),
-                            itemCount: 6,
+                            itemCount: listPlanImage.length,
                             itemBuilder: (context, index) {
-                              return const Card();
+                              return Stack(
+                                children: [
+                                  Card(
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        width: double.infinity,
+                                        child: Image.file(
+                                          File(listPlanImage[index].path),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 8,
+                                    right: 8,
+                                    child: InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          listPlanImage.removeAt(index);
+                                        });
+                                      },
+                                      child: const Icon(
+                                        Icons.cancel,
+                                        color: comSecondaryColor,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              );
                             },
                           ),
                           const SizedBox(height: 12),
                           ComButton(
                             textButton: "เพิ่มแปลนบ้าน",
-                            onPressed: () async {
-                              final ImagePicker _picker = ImagePicker();
-                              final XFile? photo = await _picker.pickImage(
-                                  source: ImageSource.camera);
-                              if (photo != null) {
-                                debugPrint("");
-                              }
-                            },
+                            onPressed: listPlanImage.length > 5
+                                ? null
+                                : () async {
+                                    final XFile? photo = await _picker
+                                        .pickImage(source: ImageSource.gallery);
+                                    if (photo != null) {
+                                      setState(() {
+                                        listPlanImage.add(photo);
+                                      });
+                                    }
+                                  },
                           ),
                           const SizedBox(height: 26),
                           Text(
