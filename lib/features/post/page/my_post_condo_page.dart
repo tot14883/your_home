@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
-import 'package:home_demo/features/sale/sale.dart';
+import 'package:home_demo/features/sale/sale_screen.dart';
 import 'package:home_demo/models/data_home_screen_model.dart';
 
 class MyPostCondoPage extends StatefulWidget {

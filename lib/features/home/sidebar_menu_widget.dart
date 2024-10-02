@@ -4,7 +4,7 @@ import 'package:home_demo/components/com_font_style.dart';
 import 'package:home_demo/features/authentication/signin_screen.dart';
 import 'package:home_demo/features/post/my_post_screen.dart';
 import 'package:home_demo/features/profile/my_profile_screen.dart';
-import 'package:home_demo/features/sale/sale.dart';
+import 'package:home_demo/features/sale/main_sale_screen.dart';
 
 class SidebarMenu extends StatefulWidget {
   const SidebarMenu({
@@ -147,7 +147,7 @@ class _SidebarMenuState extends State<SidebarMenu> {
                       const TitleSidebar(title: "ขาย"),
                       const SizedBox(height: 13),
                       ListTileSidebar(
-                        title: "ขายบ้าน",
+                        title: "ขาย",
                         icon: const Icon(
                           Icons.sell_outlined,
                           color: comPrimaryColor,
@@ -159,7 +159,7 @@ class _SidebarMenuState extends State<SidebarMenu> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SaleScreen(),
+                                builder: (context) => const MainSaleScreen(),
                               ));
                         },
                       ),

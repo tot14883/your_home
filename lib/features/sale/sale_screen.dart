@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:home_demo/components/com_app_bar.dart';
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
@@ -80,6 +79,7 @@ class _SaleScreenState extends State<SaleScreen> {
                                               BorderRadius.circular(10.0),
                                         ),
                                         width: double.infinity,
+                                        height: 100,
                                         child: Image.file(
                                           File(listImageDetail[index].path),
                                           fit: BoxFit.cover,
@@ -112,11 +112,11 @@ class _SaleScreenState extends State<SaleScreen> {
                             onPressed: listImageDetail.length > 5
                                 ? null
                                 : () async {
-                                    final XFile? photo = await _picker
-                                        .pickImage(source: ImageSource.camera);
-                                    if (photo != null) {
+                                    final List<XFile> photo =
+                                        await _picker.pickMultiImage();
+                                    if (photo.isNotEmpty) {
                                       setState(() {
-                                        listImageDetail.add(photo);
+                                        listImageDetail.addAll(photo);
                                       });
                                     }
                                   },
@@ -414,6 +414,7 @@ class _SaleScreenState extends State<SaleScreen> {
                                               BorderRadius.circular(10.0),
                                         ),
                                         width: double.infinity,
+                                        height: 100,
                                         child: Image.file(
                                           File(listPlanImage[index].path),
                                           fit: BoxFit.cover,
@@ -446,11 +447,11 @@ class _SaleScreenState extends State<SaleScreen> {
                             onPressed: listPlanImage.length > 5
                                 ? null
                                 : () async {
-                                    final XFile? photo = await _picker
-                                        .pickImage(source: ImageSource.gallery);
-                                    if (photo != null) {
+                                    final List<XFile> photo =
+                                        await _picker.pickMultiImage();
+                                    if (photo.isNotEmpty) {
                                       setState(() {
-                                        listPlanImage.add(photo);
+                                        listPlanImage.addAll(photo);
                                       });
                                     }
                                   },

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 import 'package:home_demo/features/authentication/signin_screen.dart';
-import 'package:home_demo/features/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,9 +23,7 @@ class MyApp extends StatelessWidget {
           seedColor: comPrimaryColor,
         ),
       ),
-
       home: const SigninScreen(),
-      // home: HomeScreen(),
     );
   }
 }
