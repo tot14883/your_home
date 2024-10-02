@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
+import 'package:home_demo/features/post/detail_screen.dart';
 import 'package:home_demo/features/sale/sale_screen.dart';
 import 'package:home_demo/models/data_home_screen_model.dart';
 
@@ -109,42 +110,50 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
                             },
                           ),
                         Expanded(
-                          child: Card(
-                            margin: EdgeInsets.zero,
-                            // clipBehavior: Clip.antiAlias,
-                            color: Colors.white,
-                            elevation: 0,
-                            shape: const Border(
-                                bottom: BorderSide(
-                                    width: 1, color: comPrimaryColor)),
-                            child: ListTile(
-                              leading: Image.asset(
-                                condo[index].image,
-                                width: 60,
-                                height: 60,
-                                fit: BoxFit.cover,
+                          child: InkWell(
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const DetailScreen(),
                               ),
-                              title: Text(
-                                condo[index].name,
-                                style: ComFontStyle.medium16
-                                    .copyWith(color: comPrimaryColor),
+                            ),
+                            child: Card(
+                              margin: EdgeInsets.zero,
+                              // clipBehavior: Clip.antiAlias,
+                              color: Colors.white,
+                              elevation: 0,
+                              shape: const Border(
+                                  bottom: BorderSide(
+                                      width: 1, color: comPrimaryColor)),
+                              child: ListTile(
+                                leading: Image.asset(
+                                  condo[index].image,
+                                  width: 60,
+                                  height: 60,
+                                  fit: BoxFit.cover,
+                                ),
+                                title: Text(
+                                  condo[index].name,
+                                  style: ComFontStyle.medium16
+                                      .copyWith(color: comPrimaryColor),
+                                ),
+                                subtitle: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'ที่อยู่ :${condo[index].location}',
+                                      style: const TextStyle(
+                                          color: comPrimaryColor),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    const Text(
+                                      'วันที่โพสต์ :',
+                                      style: TextStyle(color: comPrimaryColor),
+                                    ),
+                                  ],
+                                ),
+                                isThreeLine: true,
                               ),
-                              subtitle: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'ที่อยู่ :${condo[index].location}',
-                                    style:
-                                        const TextStyle(color: comPrimaryColor),
-                                  ),
-                                  const SizedBox(height: 2),
-                                  const Text(
-                                    'วันที่โพสต์ :',
-                                    style: TextStyle(color: comPrimaryColor),
-                                  ),
-                                ],
-                              ),
-                              isThreeLine: true,
                             ),
                           ),
                         ),
