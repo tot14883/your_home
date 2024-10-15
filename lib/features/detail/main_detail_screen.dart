@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_app_bar.dart';
+import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_carousel_image.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_font_style.dart';
 import 'package:home_demo/components/com_shape_circle.dart';
 import 'package:home_demo/components/com_shape_circle_location.dart';
+import 'package:home_demo/components/com_text_formfield.dart';
 
 class MainDetailScreen extends StatefulWidget {
   const MainDetailScreen({super.key, required this.id, required this.type});
@@ -31,6 +33,12 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
   ];
 
   final PageController pageController = PageController(initialPage: 0);
+  TextEditingController loanAmount = TextEditingController();
+  TextEditingController interestRate = TextEditingController();
+  TextEditingController length = TextEditingController();
+
+  double? payment;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -222,6 +230,58 @@ class _MainDetailScreenState extends State<MainDetailScreen> {
                         Text(
                           "1,500,000 บาท",
                           style: ComFontStyle.medium18,
+                        ),
+                        const SizedBox(height: 26),
+                        ComTextFormField(
+                          lable: "จำนวนเงินที่ขอกู้ (บาท)",
+                          controller: loanAmount,
+                        ),
+                        const SizedBox(height: 16),
+                        ComTextFormField(
+                          lable: "อัตราดอกเบี้ยตามประกาศ (%)",
+                          controller: interestRate,
+                        ),
+                        const SizedBox(height: 16),
+                        ComTextFormField(
+                          lable: "ระยะเวลาที่ขอกู้ (ปี)",
+                          controller: length,
+                        ),
+                        const SizedBox(height: 16),
+                        if (payment != null)
+                          RichText(
+                            text: TextSpan(
+                              text: 'ยอดผ่อนชำระต่อเดือน ',
+                              style: ComFontStyle.light16,
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: '${payment!.round()} ',
+                                    style: ComFontStyle.medium16),
+                                TextSpan(
+                                    text: ' บาท', style: ComFontStyle.light16),
+                              ],
+                            ),
+                          ),
+                        const SizedBox(height: 16),
+                        ComButton(
+                          textButton: "คำนวณเงินกู้",
+                          onPressed: () {
+                            double totalInterest = int.parse(loanAmount.text) *
+                                (double.parse(interestRate.text) / 100) *
+                                int.parse(length.text);
+
+                            // debugPrint(">>>> $totalInterest");
+
+                            int installment = int.parse(length.text) * 12;
+                            // debugPrint(">>>> $installment");
+
+                            setState(() {
+                              payment =
+                                  (int.parse(loanAmount.text) + totalInterest) /
+                                      installment;
+                            });
+
+                            // debugPrint(">>>> $payment");
+                          },
                         ),
                         const SizedBox(height: 26),
                         Text(

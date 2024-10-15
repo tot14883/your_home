@@ -1,16 +1,42 @@
-# home_demo
+# YOUR HOME - UI Kit :house_with_garden:
 
-A new Flutter project.
+===
 
-## Getting Started
+*YOUR HOME เป็นโปรเจค เกี่ยวกับการขาย บ้าน คอนโด และทาวน์โฮม
+*YOUR HOME เป็น UI Kit พัฒนาโดยใช้ Flutter
 
-This project is a starting point for a Flutter application.
+## ส่วนประกอบของ Design
 
-A few resources to get you started if this is your first Flutter project:
+===
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. หน้าเข้าสู่ระบบ
+2. หน้าสมัครสมาชิก
+3. หน้าแสดงรายการขาย
+4. หน้าเพิ่มรายการขาย
+5. หน้าจัดการรายการขาย
+6. หน้าจัดการโปรไฟล์
+7. หน้าลืมรหัสผ่าน
+8. หน้าเปลี่ยนรหัสผ่าน
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## responsive
+
+===
+
+1. mobile ✅
+2. tablet in progress
+3. web browser in progress
+
+## ข้อกำหนด
+
+===
+
+1. ไม่อนุญาตนำไปใช้ในเชิงพาณิชย์ทุกรูปแบบ
+2. อนุญาตให้นำไปใช้ในการศึกษาเท่านั้น
+
+## การใช้งาน
+
+===
+
+1. ติดตั้ง Flutter https://docs.flutter.dev/get-started/install
+2. clone YOUR HOME Project https://github.com/supharatnop/your_home.git
+3. รันคำสั่ง flutter pub get
