@@ -29,14 +29,14 @@ class ComAppBarHome extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+          const SizedBox(
+            width: 20,
+          ),
           Expanded(
-            child: Container(
-              margin: const EdgeInsets.only(right: 20),
-              child: Text(
-                "YOURHOME",
-                style: ComFontStyle.medium18.copyWith(color: Colors.white),
-                textAlign: TextAlign.center,
-              ),
+            child: Text(
+              "YOURHOME",
+              style: ComFontStyle.medium18.copyWith(color: Colors.white),
+              textAlign: TextAlign.center,
             ),
           ),
           suffixIcon,

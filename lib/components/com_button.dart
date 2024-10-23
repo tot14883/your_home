@@ -10,7 +10,8 @@ class ComButton extends StatelessWidget {
   });
 
   final String? textButton;
-  final Function()? onPressed;
+  final VoidCallback? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,11 +20,18 @@ class ComButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            backgroundColor: comSecondaryColor,
-            foregroundColor: Colors.white,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12)),
+          backgroundColor: comSecondaryColor,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              13,
+            ),
+          ),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 12,
+            vertical: 12,
+          ),
+        ),
         child: Text(
           textButton ?? "",
           style: ComFontStyle.medium16.copyWith(

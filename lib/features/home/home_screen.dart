@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     '1,000,000-1,500,000',
     '1,500,000-2,000,000',
     '2,000,000-2,500,000',
-    '2,500,000-3,000,000'
+    '2,500,000-3,000,000',
   ];
   @override
   Widget build(BuildContext context) {
@@ -42,19 +42,20 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
-            border: Border(
-              top: BorderSide(
-                width: 2,
-                color: comPrimaryColor,
-              ),
+          border: Border(
+            top: BorderSide(
+              width: 2,
+              color: comPrimaryColor,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: comPrimaryColor,
-                spreadRadius: -5.0,
-                blurRadius: 20.0,
-              ),
-            ]),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: comPrimaryColor,
+              spreadRadius: -5.0,
+              blurRadius: 20.0,
+            ),
+          ],
+        ),
         child: NavigationBar(
           backgroundColor: Colors.white,
           onDestinationSelected: (int index) {
@@ -116,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
         /// condomouium page
         CondomouiumPage(
           scaffoldGlobalkey: scaffoldGlobalkey,
-        )
+        ),
       ][currentPageIndex],
     );
   }

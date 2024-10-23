@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
@@ -10,6 +9,7 @@ import 'package:home_demo/components/com_validator.dart';
 import 'package:home_demo/features/authentication/change_password_screen.dart';
 import 'package:home_demo/features/authentication/signup_screen.dart';
 import 'package:home_demo/features/home/home_screen.dart';
+import 'package:home_demo/gen/assets.gen.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -27,11 +27,10 @@ class SigninScreen extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 100, bottom: 50),
-                child: SvgPicture.asset(
-                  "assets/images/logo/logo_your_home.svg",
-                  semanticsLabel: 'Hommy Logo',
+                child: Assets.images.logo.logoYourHome.svg(
                   width: 150,
                   height: 150,
+                  semanticsLabel: 'Hommy Logo',
                 ),
               ),
               Expanded(
@@ -76,8 +75,9 @@ class SigninScreen extends StatelessWidget {
                           child: Text(
                             "ลืมรหัสผ่าน",
                             style: ComFontStyle.regular14.copyWith(
-                                color: comPrimaryColor,
-                                decoration: TextDecoration.underline),
+                              color: comPrimaryColor,
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
                         ),
                       ),

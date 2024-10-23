@@ -14,7 +14,7 @@ class ComAppbar extends StatelessWidget {
   final String text;
   final Color? iconBackColor;
   final Color? textColor;
-  final Function()? onPop;
+  final VoidCallback? onPop;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +41,9 @@ class ComAppbar extends StatelessWidget {
               margin: const EdgeInsets.only(right: 50),
               child: Text(
                 text,
-                style: ComFontStyle.medium18
-                    .copyWith(color: textColor ?? Colors.white),
+                style: ComFontStyle.medium18.copyWith(
+                  color: textColor ?? Colors.white,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),

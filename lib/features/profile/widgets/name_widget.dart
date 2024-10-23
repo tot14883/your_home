@@ -38,7 +38,7 @@ class NameWidget extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 18),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -95,7 +95,9 @@ class NameWidget extends StatelessWidget {
                       key: formKey,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 21, vertical: 21),
+                          horizontal: 21,
+                          vertical: 21,
+                        ),
                         child: Column(
                           children: [
                             ComTextFormField(
@@ -161,44 +163,47 @@ class _DialogEditProfileState extends State<DialogEditProfile> {
   @override
   Widget build(BuildContext context) {
     return MenuAnchor(
-        alignmentOffset: const Offset(0, 5),
-        style: const MenuStyle(
-            backgroundColor: WidgetStatePropertyAll<Color>(Colors.white),
-            side: WidgetStatePropertyAll<BorderSide>(
-                BorderSide(width: 0.5, color: comPrimaryColor))),
-        builder:
-            (BuildContext context, MenuController controller, Widget? child) {
-          return IconButton(
-            onPressed: () {
-              if (controller.isOpen) {
-                controller.close();
-              } else {
-                controller.open();
-              }
-            },
-            icon: const Icon(
-              Icons.camera_alt_outlined,
-              color: comPrimaryColor,
-              size: 20,
-            ),
-            tooltip: 'Show menu',
-          );
-        },
-        menuChildren: [
-          MenuItemButton(
-            onPressed: () {},
-            child: Text(
-              'ถ่ายภาพ',
-              style: ComFontStyle.light16.copyWith(color: comPrimaryColor),
-            ),
+      alignmentOffset: const Offset(0, 5),
+      style: const MenuStyle(
+        backgroundColor: WidgetStatePropertyAll<Color>(Colors.white),
+        side: WidgetStatePropertyAll<BorderSide>(
+          BorderSide(width: 0.5, color: comPrimaryColor),
+        ),
+      ),
+      builder:
+          (BuildContext context, MenuController controller, Widget? child) {
+        return IconButton(
+          onPressed: () {
+            if (controller.isOpen) {
+              controller.close();
+            } else {
+              controller.open();
+            }
+          },
+          icon: const Icon(
+            Icons.camera_alt_outlined,
+            color: comPrimaryColor,
+            size: 20,
           ),
-          MenuItemButton(
-            onPressed: () {},
-            child: Text(
-              'เลือกจากคลัง',
-              style: ComFontStyle.light16.copyWith(color: comPrimaryColor),
-            ),
+          tooltip: 'Show menu',
+        );
+      },
+      menuChildren: [
+        MenuItemButton(
+          onPressed: () {},
+          child: Text(
+            'ถ่ายภาพ',
+            style: ComFontStyle.light16.copyWith(color: comPrimaryColor),
           ),
-        ]);
+        ),
+        MenuItemButton(
+          onPressed: () {},
+          child: Text(
+            'เลือกจากคลัง',
+            style: ComFontStyle.light16.copyWith(color: comPrimaryColor),
+          ),
+        ),
+      ],
+    );
   }
 }

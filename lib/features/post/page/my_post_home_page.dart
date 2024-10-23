@@ -31,8 +31,9 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
           ? FloatingActionButton(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2, color: comPrimaryColor),
-                  borderRadius: BorderRadius.circular(100)),
+                side: const BorderSide(width: 2, color: comPrimaryColor),
+                borderRadius: BorderRadius.circular(100),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -85,7 +86,7 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
                               "Remove",
                               style: ComFontStyle.medium14
                                   .copyWith(color: Colors.white),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -123,8 +124,11 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
                               color: Colors.white,
                               elevation: 0,
                               shape: const Border(
-                                  bottom: BorderSide(
-                                      width: 1, color: comPrimaryColor)),
+                                bottom: BorderSide(
+                                  width: 1,
+                                  color: comPrimaryColor,
+                                ),
+                              ),
                               child: ListTile(
                                 leading: Image.asset(
                                   home[index].image,
@@ -143,7 +147,8 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
                                     Text(
                                       'ที่อยู่ :${home[index].location}',
                                       style: const TextStyle(
-                                          color: comPrimaryColor),
+                                        color: comPrimaryColor,
+                                      ),
                                     ),
                                     const SizedBox(height: 2),
                                     const Text(
@@ -162,7 +167,7 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -188,9 +193,10 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
             width: 43,
             height: 43,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 2, color: comPrimaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor),
+            ),
             child: const Icon(
               Icons.delete_outline,
               color: comPrimaryColor,
@@ -209,16 +215,17 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
             width: 43,
             height: 43,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 2, color: comPrimaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor),
+            ),
             child: const Icon(
               Icons.cancel_outlined,
               color: comPrimaryColor,
               size: 18,
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -236,9 +243,10 @@ class _MyPostHomePageState extends State<MyPostHomePage> {
           width: 43,
           height: 43,
           decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(width: 2, color: comPrimaryColor)),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(width: 2, color: comPrimaryColor),
+          ),
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

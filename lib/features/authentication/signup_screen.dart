@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_demo/components/com_app_bar.dart';
 import 'package:home_demo/components/com_button.dart';
 import 'package:home_demo/components/com_color.dart';
 import 'package:home_demo/components/com_text_formfield.dart';
 import 'package:home_demo/components/com_validator.dart';
 import 'package:home_demo/features/home/home_screen.dart';
+import 'package:home_demo/gen/assets.gen.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -13,7 +13,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final keyFormData = GlobalKey<FormState>();
-    SizedBox height18 = const SizedBox(height: 18);
+    const height18 = SizedBox(height: 18);
     return Scaffold(
       backgroundColor: comPrimaryColor,
       body: SafeArea(
@@ -27,8 +27,7 @@ class SignupScreen extends StatelessWidget {
                 text: "สมัครสมาชิก",
               ),
               height18,
-              SvgPicture.asset(
-                "assets/images/logo/logo_your_home.svg",
+              Assets.images.logo.logoYourHome.svg(
                 width: 120,
                 height: 120,
               ),
@@ -107,17 +106,18 @@ class SignupScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: ComButton(
-                      onPressed: () {
-                        if (keyFormData.currentState!.validate()) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
-                            ),
-                          );
-                        }
-                      },
-                      textButton: "สมัครสมาชิก"),
+                    onPressed: () {
+                      if (keyFormData.currentState!.validate()) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        );
+                      }
+                    },
+                    textButton: "สมัครสมาชิก",
+                  ),
                 ),
               ),
               const SizedBox(height: 32),

@@ -20,14 +20,16 @@ class ComShapeCircle extends StatelessWidget {
           width: 79,
           height: 79,
           decoration: const BoxDecoration(
-              color: comTertiaryColor, shape: BoxShape.circle),
+            color: comTertiaryColor,
+            shape: BoxShape.circle,
+          ),
           child: Center(child: icon),
         ),
         const SizedBox(height: 6),
         Text(
           text,
           style: ComFontStyle.regular14.copyWith(color: comPrimaryColor),
-        )
+        ),
       ],
     );
   }

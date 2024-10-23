@@ -30,8 +30,9 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
           ? FloatingActionButton(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2, color: comPrimaryColor),
-                  borderRadius: BorderRadius.circular(100)),
+                side: const BorderSide(width: 2, color: comPrimaryColor),
+                borderRadius: BorderRadius.circular(100),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -84,7 +85,7 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
                               "Remove",
                               style: ComFontStyle.medium14
                                   .copyWith(color: Colors.white),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -121,8 +122,11 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
                               color: Colors.white,
                               elevation: 0,
                               shape: const Border(
-                                  bottom: BorderSide(
-                                      width: 1, color: comPrimaryColor)),
+                                bottom: BorderSide(
+                                  width: 1,
+                                  color: comPrimaryColor,
+                                ),
+                              ),
                               child: ListTile(
                                 leading: Image.asset(
                                   townhouse[index].image,
@@ -141,7 +145,8 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
                                     Text(
                                       'ที่อยู่ :${townhouse[index].location}',
                                       style: const TextStyle(
-                                          color: comPrimaryColor),
+                                        color: comPrimaryColor,
+                                      ),
                                     ),
                                     const SizedBox(height: 2),
                                     const Text(
@@ -160,7 +165,7 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -187,9 +192,10 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
             width: 43,
             height: 43,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 2, color: comPrimaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor),
+            ),
             child: const Icon(
               Icons.delete_outline,
               color: comPrimaryColor,
@@ -208,16 +214,17 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
             width: 43,
             height: 43,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 2, color: comPrimaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor),
+            ),
             child: const Icon(
               Icons.cancel_outlined,
               color: comPrimaryColor,
               size: 18,
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -235,9 +242,10 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
           width: 43,
           height: 43,
           decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(width: 2, color: comPrimaryColor)),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(width: 2, color: comPrimaryColor),
+          ),
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -245,7 +253,7 @@ class MyPostTownhomePageState extends State<MyPostTownhomePage> {
                 Icons.delete_outline,
                 color: comPrimaryColor,
                 size: 22,
-              )
+              ),
             ],
           ),
         ),

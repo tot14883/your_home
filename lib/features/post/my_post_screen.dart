@@ -58,7 +58,7 @@ class MyPostScreenState extends State<MyPostScreen>
                       Icons.apartment_rounded,
                       color: comPrimaryColor,
                     ),
-                  )
+                  ),
                 ],
                 controller: _tabController,
                 indicatorSize: TabBarIndicatorSize.tab,
@@ -73,7 +73,7 @@ class MyPostScreenState extends State<MyPostScreen>
                     MyPostCondoPage(),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

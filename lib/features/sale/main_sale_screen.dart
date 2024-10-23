@@ -29,7 +29,11 @@ class MainSaleScreenState extends State<MainSaleScreen> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 24, right: 24, top: 24, bottom: 31),
+                    left: 24,
+                    right: 24,
+                    top: 24,
+                    bottom: 31,
+                  ),
                   child: Column(
                     children: [
                       GridView.count(
@@ -50,7 +54,9 @@ class MainSaleScreenState extends State<MainSaleScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                    width: 2, color: comPrimaryColor),
+                                  width: 2,
+                                  color: comPrimaryColor,
+                                ),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               padding: const EdgeInsets.all(8),
@@ -81,7 +87,9 @@ class MainSaleScreenState extends State<MainSaleScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                    width: 2, color: comPrimaryColor),
+                                  width: 2,
+                                  color: comPrimaryColor,
+                                ),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               padding: const EdgeInsets.all(8),
@@ -114,7 +122,9 @@ class MainSaleScreenState extends State<MainSaleScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                    width: 2, color: comPrimaryColor),
+                                  width: 2,
+                                  color: comPrimaryColor,
+                                ),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               padding: const EdgeInsets.all(8),
@@ -137,7 +147,7 @@ class MainSaleScreenState extends State<MainSaleScreen> {
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),

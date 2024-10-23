@@ -53,7 +53,7 @@ class _SaleScreenState extends State<SaleScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 24),
-                          Text(
+                          const Text(
                             "ภาพรายละเอียด (สูงสุด 6 ภาพ)",
                             style: ComFontStyle.medium16,
                           ),
@@ -122,7 +122,7 @@ class _SaleScreenState extends State<SaleScreen> {
                                   },
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "ทำเลที่ตั้ง",
                             style: ComFontStyle.medium16,
                           ),
@@ -139,7 +139,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "จังหวัด",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -149,7 +150,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "อำเภอ",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                             ],
@@ -161,7 +163,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "ตำบล",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -171,13 +174,14 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "รหัสไปรษณีย์",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                             ],
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "สถานที่ใกล้เคียงที่สำคัญ (สูงสุด 6 สถานที่)",
                             style: ComFontStyle.medium16,
                           ),
@@ -188,7 +192,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "ชื่อสถานที่",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -198,7 +203,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "ระยะทาง (กม.)",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                             ],
@@ -240,7 +246,7 @@ class _SaleScreenState extends State<SaleScreen> {
                             ],
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "ที่ตั้งตาม Google Map",
                             style: ComFontStyle.medium16,
                           ),
@@ -251,7 +257,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "ละติจูด",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -259,9 +266,11 @@ class _SaleScreenState extends State<SaleScreen> {
                               ),
                               Expanded(
                                 child: ComTextFormField(
-                                    hintText: "ลองจิจูด",
-                                    validator: ValidatorText.validator(
-                                        "Please enter text")),
+                                  hintText: "ลองจิจูด",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -269,15 +278,18 @@ class _SaleScreenState extends State<SaleScreen> {
                           Container(
                             height: 158,
                             decoration: BoxDecoration(
-                                border: Border.all(
-                                    width: 1, color: comPrimaryColor),
-                                borderRadius: BorderRadius.circular(13)),
+                              border: Border.all(
+                                width: 1,
+                                color: comPrimaryColor,
+                              ),
+                              borderRadius: BorderRadius.circular(13),
+                            ),
                             child: const Center(
                               child: Text("Map"),
                             ),
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "ข้อมูลบ้าน",
                             style: ComFontStyle.medium16,
                           ),
@@ -288,7 +300,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "ห้องนอน",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -298,7 +311,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "ห้องน้ำ",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                             ],
@@ -310,7 +324,8 @@ class _SaleScreenState extends State<SaleScreen> {
                                 child: ComTextFormField(
                                   hintText: "จอดรถ(คัน)",
                                   validator: ValidatorText.validator(
-                                      "Please enter text"),
+                                    "Please enter text",
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -320,7 +335,7 @@ class _SaleScreenState extends State<SaleScreen> {
                             ],
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "พื้นที่ใช้สอย",
                             style: ComFontStyle.medium16,
                           ),
@@ -328,33 +343,39 @@ class _SaleScreenState extends State<SaleScreen> {
                           Row(
                             children: [
                               Expanded(
-                                  child: ComTextFormField(
-                                hintText: "ไร่",
-                                validator: ValidatorText.validator(
-                                    "Please enter text"),
-                              )),
+                                child: ComTextFormField(
+                                  hintText: "ไร่",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
+                              ),
                               const SizedBox(
                                 width: 6,
                               ),
                               Expanded(
-                                  child: ComTextFormField(
-                                hintText: "งาน",
-                                validator: ValidatorText.validator(
-                                    "Please enter text"),
-                              )),
+                                child: ComTextFormField(
+                                  hintText: "งาน",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
+                              ),
                               const SizedBox(
                                 width: 6,
                               ),
                               Expanded(
-                                  child: ComTextFormField(
-                                hintText: "ตารางวา",
-                                validator: ValidatorText.validator(
-                                    "Please enter text"),
-                              ))
+                                child: ComTextFormField(
+                                  hintText: "ตารางวา",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "พื้นที่ทั้งหมด",
                             style: ComFontStyle.medium16,
                           ),
@@ -362,33 +383,39 @@ class _SaleScreenState extends State<SaleScreen> {
                           Row(
                             children: [
                               Expanded(
-                                  child: ComTextFormField(
-                                hintText: "ไร่",
-                                validator: ValidatorText.validator(
-                                    "Please enter text"),
-                              )),
+                                child: ComTextFormField(
+                                  hintText: "ไร่",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
+                              ),
                               const SizedBox(
                                 width: 6,
                               ),
                               Expanded(
-                                  child: ComTextFormField(
-                                hintText: "งาน",
-                                validator: ValidatorText.validator(
-                                    "Please enter text"),
-                              )),
+                                child: ComTextFormField(
+                                  hintText: "งาน",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
+                              ),
                               const SizedBox(
                                 width: 6,
                               ),
                               Expanded(
-                                  child: ComTextFormField(
-                                hintText: "ตารางวา",
-                                validator: ValidatorText.validator(
-                                    "Please enter text"),
-                              ))
+                                child: ComTextFormField(
+                                  hintText: "ตารางวา",
+                                  validator: ValidatorText.validator(
+                                    "Please enter text",
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "แปลน (สูงสุด 6 ภาพ)",
                             style: ComFontStyle.medium16,
                           ),
@@ -457,7 +484,7 @@ class _SaleScreenState extends State<SaleScreen> {
                                   },
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "ราคา",
                             style: ComFontStyle.medium16,
                           ),
@@ -468,18 +495,19 @@ class _SaleScreenState extends State<SaleScreen> {
                                 ValidatorText.validator("Please enter text"),
                           ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "รายละเอียดเพิ่มเติม",
                             style: ComFontStyle.medium16,
                           ),
                           const SizedBox(height: 24),
                           ComTextFormField(
-                              maxLines: 3,
-                              hintText: "รายละเอียดเพิ่มเติม",
-                              validator:
-                                  ValidatorText.validator("Please enter text")),
+                            maxLines: 3,
+                            hintText: "รายละเอียดเพิ่มเติม",
+                            validator:
+                                ValidatorText.validator("Please enter text"),
+                          ),
                           const SizedBox(height: 26),
-                          Text(
+                          const Text(
                             "ข้อมูลติดต่อ",
                             style: ComFontStyle.medium16,
                           ),
@@ -513,7 +541,7 @@ class _SaleScreenState extends State<SaleScreen> {
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {}
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),

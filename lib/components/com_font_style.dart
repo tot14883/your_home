@@ -1,62 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:home_demo/components/com_color.dart';
+import 'package:home_demo/gen/fonts.gen.dart';
 
 class ComFontStyle {
-  static final light14 = TextStyle(
-    fontFamily: "Kanit",
+  ComFontStyle._();
+
+  static const light14 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w300,
     fontSize: 14,
     color: comPrimaryColor,
   );
 
-  static final light16 = TextStyle(
-    fontFamily: "Kanit",
+  static const light16 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w300,
     fontSize: 16,
     color: comPrimaryColor,
   );
-  static final light18 = TextStyle(
-    fontFamily: "Kanit",
+  static const light18 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w300,
     fontSize: 18,
     color: comPrimaryColor,
   );
 
-  static final regular14 = TextStyle(
-    fontFamily: "Kanit",
+  static const regular14 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w400,
     fontSize: 14,
     color: comPrimaryColor,
   );
 
-  static final regular16 = TextStyle(
-    fontFamily: "Kanit",
+  static const regular16 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w400,
     fontSize: 16,
     color: comPrimaryColor,
   );
-  static final regular18 = TextStyle(
-    fontFamily: "Kanit",
+  static const regular18 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w400,
     fontSize: 18,
     color: comPrimaryColor,
   );
 
-  static final medium14 = TextStyle(
-    fontFamily: "Kanit",
+  static const medium14 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w500,
     fontSize: 14,
     color: comPrimaryColor,
   );
 
-  static final medium16 = TextStyle(
-    fontFamily: "Kanit",
+  static const medium16 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w500,
     fontSize: 16,
     color: comPrimaryColor,
   );
-  static final medium18 = TextStyle(
-    fontFamily: "Kanit",
+  static const medium18 = TextStyle(
+    fontFamily: FontFamily.kanit,
     fontWeight: FontWeight.w500,
     fontSize: 18,
     color: comPrimaryColor,

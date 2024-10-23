@@ -61,7 +61,11 @@ class NewPasswordScreenState extends State<NewPasswordScreen> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 24, right: 24, top: 24, bottom: 32),
+                    left: 24,
+                    right: 24,
+                    top: 24,
+                    bottom: 32,
+                  ),
                   child: Form(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,17 +154,19 @@ class NewPasswordScreenState extends State<NewPasswordScreen> {
                         Text(
                           "\u2022 ต้องมีตัวอักษรมากกว่า 8 ตัว",
                           style: ComFontStyle.light16.copyWith(
-                              color: checkLengthCorrect
-                                  ? comPrimaryColor
-                                  : comSecondaryColor),
+                            color: checkLengthCorrect
+                                ? comPrimaryColor
+                                : comSecondaryColor,
+                          ),
                         ),
                         const SizedBox(height: 5),
                         Text(
                           "\u2022 ต้องมีอักษร A-Z อย่างน้อง 1 ตัว",
                           style: ComFontStyle.light16.copyWith(
-                              color: checkUppercase
-                                  ? comPrimaryColor
-                                  : comSecondaryColor),
+                            color: checkUppercase
+                                ? comPrimaryColor
+                                : comSecondaryColor,
+                          ),
                         ),
                         const SizedBox(height: 5),
                         Text(
@@ -207,19 +213,21 @@ class NewPasswordScreenState extends State<NewPasswordScreen> {
                           onPressed: () {
                             if (checkSubmit() == true) {
                               Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute<void>(
-                                      builder: (BuildContext context) =>
-                                          const SigninScreen()),
-                                  ModalRoute.withName('/'));
+                                context,
+                                MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const SigninScreen(),
+                                ),
+                                ModalRoute.withName('/'),
+                              );
                             }
                           },
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

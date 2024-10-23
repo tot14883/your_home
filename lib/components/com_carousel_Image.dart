@@ -43,25 +43,23 @@ class _ComCarouselImageState extends State<ComCarouselImage> {
           child: Container(
             alignment: Alignment.center,
             child: Row(
-              children: [
-                ...List.generate(
-                  widget.imagePaths.length,
-                  (index) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
-                    margin: const EdgeInsets.only(
-                      right: 5,
-                    ),
-                    height: 8,
-                    width: currentPageImage == index ? 20 : 8,
-                    decoration: BoxDecoration(
-                      color: currentPageImage == index
-                          ? comSecondaryColor
-                          : comPrimaryColor,
-                      borderRadius: BorderRadius.circular(4),
-                    ),
+              children: List.generate(
+                widget.imagePaths.length,
+                (index) => AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  margin: const EdgeInsets.only(
+                    right: 5,
                   ),
-                ).toList(),
-              ],
+                  height: 8,
+                  width: currentPageImage == index ? 20 : 8,
+                  decoration: BoxDecoration(
+                    color: currentPageImage == index
+                        ? comSecondaryColor
+                        : comPrimaryColor,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+              ).toList(),
             ),
           ),
         ),

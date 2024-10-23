@@ -60,15 +60,16 @@ class _SidebarMenuState extends State<SidebarMenu> {
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
                                   image: AssetImage(
-                                      "assets/images/logo/avatar.jpg"),
+                                    "assets/images/logo/avatar.jpg",
+                                  ),
                                 ),
                               ),
                             ),
                             const SizedBox(width: 18),
-                            Text(
+                            const Text(
                               "อาริตา อรัญยกุล",
                               style: ComFontStyle.medium18,
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -157,10 +158,11 @@ class _SidebarMenuState extends State<SidebarMenu> {
                         onTap: () {
                           widget.scaffoldGlobalkey.currentState!.closeDrawer();
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const MainSaleScreen(),
-                              ));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MainSaleScreen(),
+                            ),
+                          );
                         },
                       ),
                       ListTileSidebar(

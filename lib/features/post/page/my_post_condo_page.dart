@@ -31,8 +31,9 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
           ? FloatingActionButton(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2, color: comPrimaryColor),
-                  borderRadius: BorderRadius.circular(100)),
+                side: const BorderSide(width: 2, color: comPrimaryColor),
+                borderRadius: BorderRadius.circular(100),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -85,7 +86,7 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
                               "Remove",
                               style: ComFontStyle.medium14
                                   .copyWith(color: Colors.white),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -123,8 +124,11 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
                               color: Colors.white,
                               elevation: 0,
                               shape: const Border(
-                                  bottom: BorderSide(
-                                      width: 1, color: comPrimaryColor)),
+                                bottom: BorderSide(
+                                  width: 1,
+                                  color: comPrimaryColor,
+                                ),
+                              ),
                               child: ListTile(
                                 leading: Image.asset(
                                   condo[index].image,
@@ -143,7 +147,8 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
                                     Text(
                                       'ที่อยู่ :${condo[index].location}',
                                       style: const TextStyle(
-                                          color: comPrimaryColor),
+                                        color: comPrimaryColor,
+                                      ),
                                     ),
                                     const SizedBox(height: 2),
                                     const Text(
@@ -162,7 +167,7 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -188,9 +193,10 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
             width: 43,
             height: 43,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 2, color: comPrimaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor),
+            ),
             child: const Icon(
               Icons.delete_outline,
               color: comPrimaryColor,
@@ -209,16 +215,17 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
             width: 43,
             height: 43,
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 2, color: comPrimaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(width: 2, color: comPrimaryColor),
+            ),
             child: const Icon(
               Icons.cancel_outlined,
               color: comPrimaryColor,
               size: 22,
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -236,9 +243,10 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
           width: 43,
           height: 43,
           decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(width: 2, color: comPrimaryColor)),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(width: 2, color: comPrimaryColor),
+          ),
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -246,7 +254,7 @@ class MyPostCondoPageState extends State<MyPostCondoPage> {
                 Icons.delete_outline,
                 color: comPrimaryColor,
                 size: 22,
-              )
+              ),
             ],
           ),
         ),

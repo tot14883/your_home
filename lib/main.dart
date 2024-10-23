@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'Kanit',
-        textTheme: TextTheme(labelLarge: ComFontStyle.medium16),
+        textTheme: const TextTheme(labelLarge: ComFontStyle.medium16),
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: comPrimaryColor,
