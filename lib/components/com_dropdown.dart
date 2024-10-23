@@ -67,33 +67,32 @@ class ComDropDown extends StatelessWidget {
             return DropdownMenuItem(value: item.value, child: Text(item.text));
           }).toList();
         },
-        items: [
-          ...List.generate(
-            items.length,
-            (index) {
-              return DropdownMenuItem(
-                value: items[index].value,
-                child: Container(
-                  width: double.maxFinite,
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                      color: value == items[index].value
-                          ? comSecondaryColor
-                          : Colors.white,
-                      borderRadius: BorderRadius.circular(13)),
-                  child: Text(
-                    items[index].text,
-                    style: TextStyle(
-                      color: items[index].value == value
-                          ? Colors.white
-                          : comPrimaryColor,
-                    ),
+        items: List.generate(
+          items.length,
+          (index) {
+            return DropdownMenuItem(
+              value: items[index].value,
+              child: Container(
+                width: double.maxFinite,
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: value == items[index].value
+                      ? comSecondaryColor
+                      : Colors.white,
+                  borderRadius: BorderRadius.circular(13),
+                ),
+                child: Text(
+                  items[index].text,
+                  style: TextStyle(
+                    color: items[index].value == value
+                        ? Colors.white
+                        : comPrimaryColor,
                   ),
                 ),
-              );
-            },
-          )
-        ],
+              ),
+            );
+          },
+        ).toList(),
         onChanged: (value) {
           onChanged(value);
         },

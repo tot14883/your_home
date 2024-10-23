@@ -36,7 +36,11 @@ class ChangePasswordScreenState extends State<ChangePasswordScreen> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 24, right: 24, bottom: 32, top: 24),
+                    left: 24,
+                    right: 24,
+                    bottom: 32,
+                    top: 24,
+                  ),
                   child: Column(
                     children: [
                       Form(

@@ -61,12 +61,16 @@ class ChangeUserOrPassScreenState extends State<ChangeUserOrPassScreen> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 24, right: 24, bottom: 32, top: 24),
+                    left: 24,
+                    right: 24,
+                    bottom: 32,
+                    top: 24,
+                  ),
                   child: Form(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "username",
                           style: ComFontStyle.medium18,
                         ),
@@ -81,7 +85,7 @@ class ChangeUserOrPassScreenState extends State<ChangeUserOrPassScreen> {
                           ),
                         ),
                         const SizedBox(height: 21),
-                        Text(
+                        const Text(
                           "password",
                           style: ComFontStyle.medium18,
                         ),
@@ -170,17 +174,19 @@ class ChangeUserOrPassScreenState extends State<ChangeUserOrPassScreen> {
                         Text(
                           "\u2022 ต้องมีตัวอักษรมากกว่า 8 ตัว",
                           style: ComFontStyle.light16.copyWith(
-                              color: checkLengthCorrect
-                                  ? comPrimaryColor
-                                  : comSecondaryColor),
+                            color: checkLengthCorrect
+                                ? comPrimaryColor
+                                : comSecondaryColor,
+                          ),
                         ),
                         const SizedBox(height: 5),
                         Text(
                           "\u2022 ต้องมีอักษร A-Z อย่างน้อง 1 ตัว",
                           style: ComFontStyle.light16.copyWith(
-                              color: checkUppercase
-                                  ? comPrimaryColor
-                                  : comSecondaryColor),
+                            color: checkUppercase
+                                ? comPrimaryColor
+                                : comSecondaryColor,
+                          ),
                         ),
                         const SizedBox(height: 5),
                         Text(
@@ -227,7 +233,7 @@ class ChangeUserOrPassScreenState extends State<ChangeUserOrPassScreen> {
                           children: [
                             TextButton(
                               onPressed: () => Navigator.pop(context),
-                              child: Text(
+                              child: const Text(
                                 "ยกเลิก",
                                 style: ComFontStyle.medium16,
                               ),
@@ -241,7 +247,8 @@ class ChangeUserOrPassScreenState extends State<ChangeUserOrPassScreen> {
                                         title: "ยืนยันเปลี่ยนรหัสผ่าน",
                                         body: const Padding(
                                           padding: EdgeInsets.symmetric(
-                                              horizontal: 24),
+                                            horizontal: 24,
+                                          ),
                                           child: Column(
                                             children: [
                                               ComTextFormField(
@@ -253,7 +260,7 @@ class ChangeUserOrPassScreenState extends State<ChangeUserOrPassScreen> {
                                                 style: TextStyle(
                                                   color: comPrimaryColor,
                                                 ),
-                                              )
+                                              ),
                                             ],
                                           ),
                                         ),

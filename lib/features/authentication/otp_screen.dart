@@ -62,21 +62,26 @@ class OtpScreenState extends State<OtpScreen> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 24, right: 24, bottom: 32, top: 24),
+                    left: 24,
+                    right: 24,
+                    bottom: 32,
+                    top: 24,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         "OTP จะถูกส่งไปยัง",
                         style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w500,
-                            color: comPrimaryColor),
+                          fontSize: 22,
+                          fontWeight: FontWeight.w500,
+                          color: comPrimaryColor,
+                        ),
                       ),
                       const SizedBox(height: 5),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             "arita_a@mail.com",
                             style: ComFontStyle.medium18,
                           ),
@@ -96,7 +101,8 @@ class OtpScreenState extends State<OtpScreen> {
                                   title: "เปลี่ยนอีเมลล์",
                                   body: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 24),
+                                      horizontal: 24,
+                                    ),
                                     child: Form(
                                       key: formKeyEmail,
                                       child: Column(
@@ -107,7 +113,8 @@ class OtpScreenState extends State<OtpScreen> {
                                                 "เปลี่ยนที่อยู่อีเมลล์เพื่อส่ง OTP",
                                             hintText: "e-mail",
                                             validator: ValidatorText.validator(
-                                                "Please enter email"),
+                                              "Please enter email",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -130,7 +137,7 @@ class OtpScreenState extends State<OtpScreen> {
                         ],
                       ),
                       const SizedBox(height: 21),
-                      Text(
+                      const Text(
                         "กรุณากรอก OTP ที่ได้จากอีเมลล์เพื่อทำการตั้งรหัสผ่านใหม่",
                         style: ComFontStyle.light14,
                       ),
@@ -256,7 +263,7 @@ class OtpScreenState extends State<OtpScreen> {
                             //   style: ComFontStyle.light16,
                             // ),
                             // const SizedBox(height: 6),
-                            Text(
+                            const Text(
                               "ยังไม่ได้รับ OTP ?",
                               style: ComFontStyle.light14,
                             ),
@@ -267,9 +274,10 @@ class OtpScreenState extends State<OtpScreen> {
                               child: Text(
                                 "ส่งใหม่",
                                 style: ComFontStyle.medium14.copyWith(
-                                    decoration: TextDecoration.underline),
+                                  decoration: TextDecoration.underline,
+                                ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),

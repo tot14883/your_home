@@ -82,7 +82,7 @@ class TownHomePageState extends State<TownHomePage> {
                               value: listLocation[index],
                               text: listLocation[index],
                             ),
-                          )
+                          ),
                         ],
                         items: [
                           ...List.generate(
@@ -91,7 +91,7 @@ class TownHomePageState extends State<TownHomePage> {
                               value: listLocation[index],
                               text: listLocation[index],
                             ),
-                          )
+                          ),
                         ],
                         onChanged: (p0) {
                           setState(() {
@@ -115,7 +115,7 @@ class TownHomePageState extends State<TownHomePage> {
                               value: listPrice[index],
                               text: listPrice[index],
                             ),
-                          )
+                          ),
                         ],
                         items: [
                           ...List.generate(
@@ -124,7 +124,7 @@ class TownHomePageState extends State<TownHomePage> {
                               value: listPrice[index],
                               text: listPrice[index],
                             ),
-                          )
+                          ),
                         ],
                         onChanged: (p0) {
                           setState(() {
@@ -173,7 +173,9 @@ class TownHomePageState extends State<TownHomePage> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => MainDetailScreen(
-                                    id: townHomeData[index].id, type: ""),
+                                  id: townHomeData[index].id,
+                                  type: "",
+                                ),
                               ),
                             ),
                             name: townHomeData[index].name,
@@ -187,7 +189,7 @@ class TownHomePageState extends State<TownHomePage> {
                       ),
                       const SizedBox(
                         height: 50,
-                      )
+                      ),
                     ],
                   ),
                 ),

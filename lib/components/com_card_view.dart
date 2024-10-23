@@ -20,7 +20,8 @@ class ComCardView extends StatelessWidget {
   final String? location;
   final String? price;
   final String? image;
-  final Function()? onTap;
+  final VoidCallback? onTap;
+
   @override
   Widget build(BuildContext context) {
     return Card(

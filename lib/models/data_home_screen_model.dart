@@ -1,10 +1,14 @@
+// ทำเป็นไฟล์ Mock json และใช้ JsonSerializable กับ Freezed ทำ map entity ดีกว่า
 class DataHomeScreenModel {
   final List<HomeHomeScreenModel> home;
   final List<TownHouseHomeScreenModel> townhouse;
   final List<CondoHomeScreenModel> condo;
 
-  DataHomeScreenModel(
-      {required this.home, required this.townhouse, required this.condo});
+  DataHomeScreenModel({
+    required this.home,
+    required this.townhouse,
+    required this.condo,
+  });
 }
 
 class HomeHomeScreenModel {

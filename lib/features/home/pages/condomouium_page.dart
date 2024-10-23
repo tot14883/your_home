@@ -82,7 +82,7 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                               value: listLocation[index],
                               text: listLocation[index],
                             ),
-                          )
+                          ),
                         ],
                         items: [
                           ...List.generate(
@@ -91,7 +91,7 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                               value: listLocation[index],
                               text: listLocation[index],
                             ),
-                          )
+                          ),
                         ],
                         onChanged: (p0) {
                           setState(() {
@@ -115,7 +115,7 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                               value: listPrice[index],
                               text: listPrice[index],
                             ),
-                          )
+                          ),
                         ],
                         items: [
                           ...List.generate(
@@ -124,7 +124,7 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                               value: listPrice[index],
                               text: listPrice[index],
                             ),
-                          )
+                          ),
                         ],
                         onChanged: (p0) {
                           setState(() {
@@ -170,11 +170,14 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                         itemBuilder: (context, index) {
                           return ComCardView(
                             onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => MainDetailScreen(
-                                      id: condoData[index].id, type: ""),
-                                )),
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MainDetailScreen(
+                                  id: condoData[index].id,
+                                  type: "",
+                                ),
+                              ),
+                            ),
                             name: condoData[index].name,
                             badroom: condoData[index].badroom,
                             bathroom: condoData[index].bathroom,
@@ -186,7 +189,7 @@ class CondomouiumPageState extends State<CondomouiumPage> {
                       ),
                       const SizedBox(
                         height: 50,
-                      )
+                      ),
                     ],
                   ),
                 ),

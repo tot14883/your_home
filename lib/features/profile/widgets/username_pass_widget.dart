@@ -19,7 +19,7 @@ class UsernamePassWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: Row(
               children: [
                 Column(
@@ -30,26 +30,29 @@ class UsernamePassWidget extends StatelessWidget {
                       'username : arita_a@mail.com',
                       style: ComFontStyle.regular16,
                     ),
-                    Text('password: ************',
-                        style: ComFontStyle.regular16),
+                    Text(
+                      'password: ************',
+                      style: ComFontStyle.regular16,
+                    ),
                   ],
                 ),
               ],
             ),
           ),
           InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ChangeUserOrPassScreen(),
-                  ),
-                );
-              },
-              child: const Icon(
-                Icons.arrow_forward_ios,
-                color: comPrimaryColor,
-              )),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ChangeUserOrPassScreen(),
+                ),
+              );
+            },
+            child: const Icon(
+              Icons.arrow_forward_ios,
+              color: comPrimaryColor,
+            ),
+          ),
         ],
       ),
     );

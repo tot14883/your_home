@@ -12,8 +12,8 @@ Future<String?> comDialog({
   String? textCancelBtn,
   Color? colorTextOKBtn,
   Color? colorTextCancelBtn,
-  Function()? onPressedOKBtn,
-  Function()? onPressedCancelBtn,
+  VoidCallback? onPressedOKBtn,
+  VoidCallback? onPressedCancelBtn,
 }) {
   return showDialog<String>(
     context: context,
@@ -39,8 +39,9 @@ Future<String?> comDialog({
                     margin: const EdgeInsets.only(left: 50),
                     child: Text(
                       title,
-                      style: ComFontStyle.medium16
-                          .copyWith(color: comPrimaryColor),
+                      style: ComFontStyle.medium16.copyWith(
+                        color: comPrimaryColor,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -73,7 +74,8 @@ Future<String?> comDialog({
                       child: Text(
                         textCancelBtn,
                         style: ComFontStyle.medium16.copyWith(
-                            color: colorTextCancelBtn ?? comPrimaryColor),
+                          color: colorTextCancelBtn ?? comPrimaryColor,
+                        ),
                       ),
                     ),
                   const SizedBox(width: 12),
@@ -83,7 +85,8 @@ Future<String?> comDialog({
                       child: Text(
                         textOKBtn,
                         style: ComFontStyle.medium16.copyWith(
-                            color: colorTextOKBtn ?? comSecondaryColor),
+                          color: colorTextOKBtn ?? comSecondaryColor,
+                        ),
                       ),
                     ),
                 ],

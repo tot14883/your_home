@@ -50,47 +50,53 @@ class ComTextFormField extends StatelessWidget {
           ),
         const SizedBox(height: 8),
         TextFormField(
-            maxLength: maxLength,
-            textAlign: textAlign ?? TextAlign.start,
-            obscureText: obscureText,
-            enabled: enabled,
-            focusNode: focusNode,
-            controller: controller,
-            onFieldSubmitted: onFieldSubmitted,
-            onChanged: onChanged,
-            onSaved: onSaved,
-            maxLines: maxLines,
-            validator: validator,
-            style: ComFontStyle.medium16.copyWith(color: comPrimaryColor),
-            decoration: InputDecoration(
-              counterText: "",
-              isDense: true,
-              filled: true,
-              fillColor: Colors.white,
-              prefixIcon: prefixIcon,
-              suffixIcon: suffixIcon,
-              contentPadding:
-                  const EdgeInsets.symmetric(vertical: 18, horizontal: 16),
-              enabledBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(13.00)),
-                  borderSide: BorderSide(color: comPrimaryColor)),
-              disabledBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(13.00)),
-                  borderSide: BorderSide(color: Colors.grey)),
-              focusedBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(13.00)),
-                  borderSide: BorderSide(color: comPrimaryColor)),
-              errorBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(13.00)),
-                  borderSide: BorderSide(color: comSecondaryColor)),
-              focusedErrorBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(13.00)),
-                  borderSide: BorderSide(color: comSecondaryColor)),
-              errorStyle:
-                  ComFontStyle.regular14.copyWith(color: comSecondaryColor),
-              hintText: hintText,
-              hintStyle: ComFontStyle.medium16.copyWith(color: comPrimaryColor),
-            )),
+          maxLength: maxLength,
+          textAlign: textAlign ?? TextAlign.start,
+          obscureText: obscureText,
+          enabled: enabled,
+          focusNode: focusNode,
+          controller: controller,
+          onFieldSubmitted: onFieldSubmitted,
+          onChanged: onChanged,
+          onSaved: onSaved,
+          maxLines: maxLines,
+          validator: validator,
+          style: ComFontStyle.medium16.copyWith(color: comPrimaryColor),
+          decoration: InputDecoration(
+            counterText: "",
+            isDense: true,
+            filled: true,
+            fillColor: Colors.white,
+            prefixIcon: prefixIcon,
+            suffixIcon: suffixIcon,
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 18, horizontal: 16),
+            enabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(13.00)),
+              borderSide: BorderSide(color: comPrimaryColor),
+            ),
+            disabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(13.00)),
+              borderSide: BorderSide(color: Colors.grey),
+            ),
+            focusedBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(13.00)),
+              borderSide: BorderSide(color: comPrimaryColor),
+            ),
+            errorBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(13.00)),
+              borderSide: BorderSide(color: comSecondaryColor),
+            ),
+            focusedErrorBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(13.00)),
+              borderSide: BorderSide(color: comSecondaryColor),
+            ),
+            errorStyle:
+                ComFontStyle.regular14.copyWith(color: comSecondaryColor),
+            hintText: hintText,
+            hintStyle: ComFontStyle.medium16.copyWith(color: comPrimaryColor),
+          ),
+        ),
       ],
     );
   }

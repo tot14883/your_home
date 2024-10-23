@@ -26,7 +26,7 @@ class DetailScreenState extends State<DetailScreen> {
 
   List<String> plan = [
     "assets/images/homes/plan_1.jpeg",
-    "assets/images/homes/plan_2.jpeg"
+    "assets/images/homes/plan_2.jpeg",
   ];
 
   final PageController pageController = PageController(initialPage: 0);
@@ -37,8 +37,9 @@ class DetailScreenState extends State<DetailScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: comPrimaryColor,
         shape: RoundedRectangleBorder(
-            side: const BorderSide(width: 2, color: comPrimaryColor),
-            borderRadius: BorderRadius.circular(100)),
+          side: const BorderSide(width: 2, color: comPrimaryColor),
+          borderRadius: BorderRadius.circular(100),
+        ),
         onPressed: () {
           Navigator.push(
             context,
@@ -76,7 +77,7 @@ class DetailScreenState extends State<DetailScreen> {
                           style: ComFontStyle.regular14,
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "ข้อมูลบ้าน",
                           style: ComFontStyle.medium16,
                         ),
@@ -137,7 +138,7 @@ class DetailScreenState extends State<DetailScreen> {
                           ],
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "แปลนบ้าน",
                           style: ComFontStyle.medium16,
                         ),
@@ -148,14 +149,16 @@ class DetailScreenState extends State<DetailScreen> {
                           child: Column(
                             children: [
                               Expanded(
-                                  child: ComCarouselImage(
-                                      pageController: pageController,
-                                      imagePaths: plan)),
+                                child: ComCarouselImage(
+                                  pageController: pageController,
+                                  imagePaths: plan,
+                                ),
+                              ),
                             ],
                           ),
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "รูปภาพ",
                           style: ComFontStyle.medium16,
                         ),
@@ -166,14 +169,16 @@ class DetailScreenState extends State<DetailScreen> {
                           child: Column(
                             children: [
                               Expanded(
-                                  child: ComCarouselImage(
-                                      pageController: pageController,
-                                      imagePaths: imagePaths)),
+                                child: ComCarouselImage(
+                                  pageController: pageController,
+                                  imagePaths: imagePaths,
+                                ),
+                              ),
                             ],
                           ),
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "ทำเลที่ตั้ง",
                           style: ComFontStyle.medium16,
                         ),
@@ -218,7 +223,7 @@ class DetailScreenState extends State<DetailScreen> {
                           ],
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "Map",
                           style: ComFontStyle.medium16,
                         ),
@@ -232,86 +237,86 @@ class DetailScreenState extends State<DetailScreen> {
                           ),
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "ราคา",
                           style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 8),
-                        Text(
+                        const Text(
                           "1,500,000 บาท",
                           style: ComFontStyle.medium18,
                         ),
                         const SizedBox(height: 26),
-                        Text(
+                        const Text(
                           "ติดต่อสอบถาม",
                           style: ComFontStyle.medium16,
                         ),
                         const SizedBox(height: 24),
-                        Row(
+                        const Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.phone_android_outlined,
                               size: 24,
                               color: comPrimaryColor,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 13,
                             ),
                             Text(
                               "0801234567",
                               style: ComFontStyle.regular16,
-                            )
+                            ),
                           ],
                         ),
                         const SizedBox(height: 18),
-                        Row(
+                        const Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.chat_bubble_outline,
                               size: 24,
                               color: comPrimaryColor,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 13,
                             ),
                             Text(
                               "ID LINE",
                               style: ComFontStyle.regular16,
-                            )
+                            ),
                           ],
                         ),
                         const SizedBox(height: 18),
-                        Row(
+                        const Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.facebook_outlined,
                               size: 24,
                               color: comPrimaryColor,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 13,
                             ),
                             Text(
                               "Facebook",
                               style: ComFontStyle.regular16,
-                            )
+                            ),
                           ],
                         ),
                         const SizedBox(height: 18),
-                        Row(
+                        const Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.mail_outline,
                               size: 24,
                               color: comPrimaryColor,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 13,
                             ),
                             Text(
                               "yourhome.home@mail.com",
                               style: ComFontStyle.regular16,
-                            )
+                            ),
                           ],
                         ),
                       ],

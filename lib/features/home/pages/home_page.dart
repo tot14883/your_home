@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                               value: listLocation[index],
                               text: listLocation[index],
                             ),
-                          )
+                          ),
                         ],
                         items: [
                           ...List.generate(
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                               value: listLocation[index],
                               text: listLocation[index],
                             ),
-                          )
+                          ),
                         ],
                         onChanged: (p0) {
                           setState(() {
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                               value: listPrice[index],
                               text: listPrice[index],
                             ),
-                          )
+                          ),
                         ],
                         items: [
                           ...List.generate(
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                               value: listPrice[index],
                               text: listPrice[index],
                             ),
-                          )
+                          ),
                         ],
                         onChanged: (p0) {
                           setState(() {

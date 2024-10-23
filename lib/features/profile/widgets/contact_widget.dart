@@ -22,7 +22,7 @@ class ContactWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: Row(
               children: [
                 Column(
@@ -33,8 +33,10 @@ class ContactWidget extends StatelessWidget {
                       'อีเมลล์ : arita_a@mail.com',
                       style: ComFontStyle.regular16,
                     ),
-                    Text('เบอร์โทร : 0900000000',
-                        style: ComFontStyle.regular16),
+                    Text(
+                      'เบอร์โทร : 0900000000',
+                      style: ComFontStyle.regular16,
+                    ),
                   ],
                 ),
               ],
